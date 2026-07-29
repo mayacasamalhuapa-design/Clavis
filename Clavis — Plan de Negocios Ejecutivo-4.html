@@ -1,0 +1,957 @@
+<html data-type="html" data-identifier="a8f4e621-3c9d-4b7e-9f12-6d5a8e3c1b40" data-title="Clavis — Plan de Negocios Ejecutivo" data-version="6" width="1200" height="900"><head>
+<meta charset="utf-8">
+<style>
+:root{
+  --lila:#F4DAF6; --malva:#BC92C0; --violeta:#5D5B9B;
+  --indigo:#333769; --tinta:#0D0D38; --papel:#FBFAFC; --blanco:#FFFFFF;
+  --linea:rgba(188,146,192,.32);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter','Segoe UI',-apple-system,Arial,sans-serif;background:var(--papel);color:var(--tinta);font-size:14.5px;line-height:1.55}
+h1,h2,h3,h4{font-weight:600;letter-spacing:-.01em}
+p{color:rgba(13,13,56,.82)}
+strong{font-weight:600;color:var(--tinta)}
+svg.ic{flex:0 0 auto;vertical-align:middle}
+
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--linea)}
+.top{max-width:1180px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-name{font-size:17px;font-weight:700;letter-spacing:.22em}
+.brand-tag{font-size:9px;color:var(--malva);letter-spacing:.14em;text-transform:uppercase;margin-top:3px}
+.pill{display:inline-flex;align-items:center;gap:6px;font-size:9.5px;font-weight:600;padding:6px 12px;border-radius:20px;background:var(--lila);color:var(--indigo);white-space:nowrap}
+.pill.dark{background:var(--tinta);color:var(--lila)}
+.partners{display:flex;gap:8px}
+
+nav.tabs{max-width:1180px;margin:0 auto;padding:0 28px;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+nav.tabs::-webkit-scrollbar{display:none}
+.tab-btn{border:none;background:none;padding:12px 13px;font-size:10.8px;font-weight:700;letter-spacing:.03em;color:var(--indigo);cursor:pointer;border-bottom:2.5px solid transparent;white-space:nowrap;font-family:inherit}
+.tab-btn:hover{color:var(--violeta)}
+.tab-btn.active{color:var(--tinta);border-bottom-color:var(--violeta)}
+.tab-btn .idx{color:var(--malva);margin-right:4px}
+
+main{max-width:1180px;margin:0 auto;padding:32px 28px 90px}
+.panel{display:none}
+.panel.active{display:block;animation:fade .3s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+.eyebrow{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--malva);margin-bottom:8px}
+h1.page{font-size:28px;margin-bottom:6px}
+.sub{font-size:14px;color:var(--violeta);font-weight:400;max-width:78ch;margin-bottom:22px}
+.quote{border-left:2.5px solid var(--malva);padding:2px 0 2px 16px;font-style:italic;color:var(--violeta);font-size:13px;margin:14px 0 22px;max-width:76ch}
+
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:900px){.g2,.g3,.g4{grid-template-columns:1fr}}
+
+.card{background:var(--blanco);border:1px solid var(--linea);border-radius:12px;padding:18px 20px}
+.card.tint{background:linear-gradient(160deg,#F9EEFB,#FDFBFD)}
+.card.dark{background:var(--tinta);color:#fff;border-color:var(--tinta)}
+.card.dark .lab,.card.dark small{color:var(--malva)}
+.stat .lab{font-size:9px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--malva);margin-bottom:8px}
+.stat .val{font-size:23px;font-weight:700;letter-spacing:-.02em}
+.stat .val.txt{font-size:15px}
+.stat .delta{font-size:11px;color:var(--violeta);margin-top:5px;font-weight:600}
+.card.dark .val{color:#fff}
+.card.dark .delta{color:var(--lila)}
+.stat-head{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+
+.tag{display:inline-block;font-size:9px;font-weight:700;padding:3px 9px;border-radius:20px;letter-spacing:.05em;text-transform:uppercase}
+.tag.b2b{background:var(--indigo);color:#fff}
+.tag.b2c{background:var(--malva);color:#fff}
+.tag.online{background:var(--lila);color:var(--indigo)}
+.tag.fisico{background:#E4EAF0;color:var(--indigo)}
+
+h3.card-title{font-size:15px;margin:10px 0 5px}
+.mini-list{margin-top:8px;font-size:12.3px}
+.mini-list li{list-style:none;padding:4px 0 4px 15px;position:relative;color:rgba(13,13,56,.78)}
+.mini-list li::before{content:'';position:absolute;left:0;top:11px;width:6px;height:1px;background:var(--malva)}
+
+.tw{overflow-x:auto;margin:12px 0}
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+th{text-align:left;padding:7px 10px 7px 0;font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--violeta);border-bottom:1.5px solid var(--violeta)}
+td{padding:8px 10px 8px 0;border-bottom:1px solid rgba(93,91,155,.1);color:rgba(13,13,56,.85)}
+td.n,th.n{text-align:right}
+tr.tot td{border-top:1.5px solid var(--malva);border-bottom:none;font-weight:700;color:var(--tinta)}
+tr.hi td{background:rgba(244,218,246,.4);font-weight:700}
+.win{color:var(--violeta);font-weight:700}
+
+details{background:var(--blanco);border:1px solid var(--linea);border-radius:10px;margin:8px 0;overflow:hidden}
+summary{cursor:pointer;padding:12px 16px;font-size:12.5px;font-weight:600;color:var(--indigo);list-style:none;display:flex;justify-content:space-between}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'+';font-size:16px;color:var(--malva)}
+details[open] summary::after{content:'–'}
+.db{padding:0 16px 16px}
+h4.sec{margin:12px 0 6px;font-size:11.5px;color:var(--violeta);text-transform:uppercase;letter-spacing:.06em}
+
+.yeartoggle{display:inline-flex;background:var(--lila);border-radius:30px;padding:4px;margin-bottom:18px}
+.ytab{border:none;background:none;padding:8px 18px;border-radius:26px;font-size:11.5px;font-weight:700;color:var(--indigo);cursor:pointer;font-family:inherit}
+.ytab.active{background:var(--tinta);color:#fff}
+.year-panel{display:none}
+.year-panel.active{display:block}
+
+.flow{display:flex;gap:8px;overflow-x:auto;padding:4px 0 12px}
+.flow-step{flex:0 0 175px;background:var(--blanco);border:1px solid var(--linea);border-radius:10px;padding:14px}
+.flow-step .n{font-size:9.5px;color:var(--malva);font-weight:700}
+.flow-step h4{font-size:12.5px;margin:5px 0 3px}
+.flow-step p{font-size:11px}
+.arrow{align-self:center;color:var(--malva);font-size:16px}
+
+.note{background:var(--blanco);border:1px solid var(--linea);border-left:3px solid var(--violeta);border-radius:0 10px 10px 0;padding:14px 18px;margin:14px 0;font-size:12.5px}
+.note h4{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--violeta);margin-bottom:5px}
+.pct{display:inline-block;background:var(--indigo);color:#fff;font-weight:700;padding:2px 8px;border-radius:6px;font-size:11.5px}
+
+.id-hero{display:flex;gap:24px;align-items:center;background:var(--blanco);border:1px solid var(--linea);border-radius:14px;padding:24px;margin-bottom:18px}
+.id-hero .lema{font-size:13px;font-style:italic;color:var(--violeta);margin-top:4px}
+.id-hero .etim{font-size:11.5px;color:rgba(13,13,56,.72);margin-top:10px;max-width:64ch}
+.objn{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--indigo);color:#fff;font-size:11px;font-weight:700;flex:0 0 auto}
+.objrow{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid rgba(93,91,155,.1)}
+.objrow:last-child{border-bottom:none}
+.objrow h4{font-size:13px;margin-bottom:2px}
+.objrow p{font-size:12.5px;margin:0}
+
+/* ===== ORGANIGRAMA ===== */
+.org-wrap{overflow-x:auto;padding:8px 0 22px}
+.gov-row{display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:20px;flex-wrap:wrap}
+.gov-box{border:1.5px dashed var(--malva);border-radius:10px;padding:9px 16px;font-size:11.5px;font-weight:700;color:var(--violeta);background:rgba(244,218,246,.28);text-align:center}
+.gov-line{flex:0 0 34px;height:0;border-top:1.5px dashed var(--malva)}
+.gov-label{font-size:9px;color:var(--malva);text-align:center;letter-spacing:.08em;text-transform:uppercase;font-weight:700;width:100%;margin-top:-8px;margin-bottom:8px}
+
+.org-tree{display:flex;justify-content:center;min-width:560px}
+.org-tree ul{padding-top:22px;position:relative;display:flex;justify-content:center}
+.org-tree>ul{padding-top:0}
+.org-tree li{display:flex;flex-direction:column;align-items:center;list-style:none;position:relative;padding:22px 10px 0 10px}
+.org-tree li::before,.org-tree li::after{content:'';position:absolute;top:0;right:50%;border-top:1.5px solid var(--linea);width:50%;height:22px}
+.org-tree li::after{right:auto;left:50%;border-left:1.5px solid var(--linea)}
+.org-tree li:only-child::after,.org-tree li:only-child::before{display:none}
+.org-tree li:only-child{padding-top:0}
+.org-tree li:first-child::before,.org-tree li:last-child::after{border:0 none}
+.org-tree li:last-child::before{border-right:1.5px solid var(--linea);border-radius:0 6px 0 0}
+.org-tree li:first-child::after{border-radius:6px 0 0 0}
+.org-tree>ul>li{padding-top:0}
+.org-tree>ul>li::before,.org-tree>ul>li::after{display:none}
+.org-tree ul ul::before{content:'';position:absolute;top:0;left:50%;border-left:1.5px solid var(--linea);width:0;height:22px}
+
+.obox{display:inline-flex;flex-direction:column;align-items:center;gap:5px;border:1.5px solid var(--indigo);border-radius:10px;padding:10px 14px;background:#fff;font-size:11.5px;font-weight:700;color:var(--indigo);white-space:nowrap;min-width:150px}
+.obox.dark{background:var(--tinta);color:#fff;border-color:var(--tinta)}
+.obox.dark .otag{background:var(--malva);color:#fff}
+.otag{font-size:9px;font-weight:700;padding:2px 9px;border-radius:20px;letter-spacing:.02em}
+.otag.inc{background:var(--malva);color:#fff}
+.otag.mnd{background:#E4EAF0;color:var(--indigo)}
+
+.ext-row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:20px;padding-top:16px;border-top:1px dashed var(--linea);min-width:560px}
+.ext-row-wrap{display:flex;flex-direction:column;align-items:center}
+.ext-pill{border:1px dashed var(--malva);border-radius:20px;padding:6px 14px;font-size:11px;color:var(--violeta);font-weight:700;background:rgba(244,218,246,.15)}
+.ext-label{font-size:9.5px;color:var(--malva);letter-spacing:.12em;text-transform:uppercase;text-align:center;margin-bottom:10px;font-weight:700;width:100%}
+
+.legend{display:flex;gap:16px;justify-content:center;margin-top:16px;font-size:10.5px;color:rgba(13,13,56,.7);flex-wrap:wrap}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend .dot{width:9px;height:9px;border-radius:50%;flex:0 0 auto}
+.dot.mando{background:var(--indigo)}
+.dot.inc{background:var(--malva)}
+.dot.gov{background:transparent;border:1.5px dashed var(--malva)}
+
+footer{background:var(--tinta);color:rgba(244,218,246,.7);padding:26px 28px;font-size:10.5px;text-align:center}
+.refs{font-size:11px;color:rgba(13,13,56,.7)}
+.refs div{padding:6px 0;border-bottom:1px solid rgba(93,91,155,.1)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="top">
+    <div class="brand">
+      <svg width="66" height="34" viewBox="0 0 86 46" fill="none">
+        <path d="M34.6 13.2 A13.4 13.4 0 1 0 34.6 32.8" stroke="#5D5B9B" stroke-width="4.4" stroke-linecap="round"></path>
+        <path d="M33.4 23 H74.5" stroke="#5D5B9B" stroke-width="4.4" stroke-linecap="round"></path>
+        <path d="M62.5 23 V33.4" stroke="#BC92C0" stroke-width="4.4" stroke-linecap="round"></path>
+        <path d="M71.6 23 V30.2" stroke="#BC92C0" stroke-width="4.4" stroke-linecap="round"></path>
+        <circle cx="22.4" cy="23" r="3.5" fill="#F4DAF6" stroke="#BC92C0" stroke-width="1.4"></circle>
+      </svg>
+      <div><div class="brand-name">CLAVIS</div><div class="brand-tag">Every door leads somewhere</div></div>
+    </div>
+    <div class="partners">
+      <span class="pill">
+        <svg class="ic" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#333769" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M5 21V9l7-6 7 6v12"></path><path d="M9 21v-6h6v6"></path></svg>
+        Almacenes Simán
+      </span>
+      <span class="pill dark">
+        <svg class="ic" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#F4DAF6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8L12 3 3 8l9 5 9-5Z"></path><path d="M3 8v8l9 5 9-5V8"></path><path d="M12 13v8"></path></svg>
+        Logística Boxful
+      </span>
+    </div>
+  </div>
+  <nav class="tabs" id="tabnav">
+    <button class="tab-btn active" data-tab="resumen"><span class="idx">00</span>Resumen</button>
+    <button class="tab-btn" data-tab="segmentos"><span class="idx">01</span>Segmentos</button>
+    <button class="tab-btn" data-tab="preguntas"><span class="idx">02</span>5 Preguntas</button>
+    <button class="tab-btn" data-tab="escenario"><span class="idx">03</span>Escenario Financiero</button>
+    <button class="tab-btn" data-tab="restricciones"><span class="idx">04</span>Restricciones</button>
+    <button class="tab-btn" data-tab="eficiencia"><span class="idx">05</span>Dualidad Eficiencia</button>
+    <button class="tab-btn" data-tab="coordinacion"><span class="idx">06</span>Coordinación</button>
+    <button class="tab-btn" data-tab="agente"><span class="idx">07</span>Agente-Principal</button>
+    <button class="tab-btn" data-tab="legal"><span class="idx">08</span>Legal</button>
+    <button class="tab-btn" data-tab="logistica"><span class="idx">09</span>Logística</button>
+    <button class="tab-btn" data-tab="anexos"><span class="idx">10</span>Anexos</button>
+  </nav>
+</header>
+
+<main>
+
+<!-- 00 RESUMEN -->
+<section class="panel active" id="p-resumen">
+  <p class="eyebrow">Plan de Negocios · El Salvador 2026</p>
+  <h1 class="page">Clavis: de distribuidora nacional a marca centroamericana</h1>
+  <p class="sub">Importadora y distribuidora de skincare con cobertura nacional desde el Año 1, apalancada en <strong>Almacenes Simán</strong> como canal ancla y logística de última milla con <strong>Boxful</strong>.</p>
+
+  <h4 class="sec" style="margin-top:0">Identidad del emprendimiento</h4>
+  <div class="id-hero">
+    <svg width="76" height="40" viewBox="0 0 86 46" fill="none">
+      <path d="M34.6 13.2 A13.4 13.4 0 1 0 34.6 32.8" stroke="#5D5B9B" stroke-width="4.4" stroke-linecap="round"></path>
+      <path d="M33.4 23 H74.5" stroke="#5D5B9B" stroke-width="4.4" stroke-linecap="round"></path>
+      <path d="M62.5 23 V33.4" stroke="#BC92C0" stroke-width="4.4" stroke-linecap="round"></path>
+      <path d="M71.6 23 V30.2" stroke="#BC92C0" stroke-width="4.4" stroke-linecap="round"></path>
+      <circle cx="22.4" cy="23" r="3.5" fill="#F4DAF6" stroke="#BC92C0" stroke-width="1.4"></circle>
+    </svg>
+    <div>
+      <div class="brand-name" style="font-size:15px">CLAVIS</div>
+      <div class="lema">"Every door leads somewhere"</div>
+      <p class="etim"><strong>Clavis</strong>, del latín <em>"llave"</em>, representa apertura, descubrimiento y conexión. Su símbolo dorado evoca elegancia y propósito: abrir puertas hacia el cuidado personal consciente. La marca combina la innovación del skincare con una visión moderna y accesible, guiando a cada persona a encontrar su propio camino hacia el bienestar.</p>
+    </div>
+  </div>
+
+  <div class="grid g2" style="margin-bottom:18px">
+    <div class="card">
+      <h3 class="card-title">Misión</h3>
+      <p style="font-size:13px">Clavis busca convertirse en un referente accesible y confiable en el mundo del skincare, ofreciendo productos innovadores y de calidad que conecten con las necesidades reales de las personas. Queremos ser la distribuidora que acerque tendencias globales a nuestro mercado, creando experiencias de cuidado que inspiren confianza y bienestar.</p>
+    </div>
+    <div class="card tint">
+      <h3 class="card-title">Visión</h3>
+      <p style="font-size:13px">En Clavis trabajamos para importar y distribuir productos de skincare, cuidando cada detalle para garantizar calidad y precios justos. Nos enfocamos en atender tanto a clientes mayoristas como minoristas, con un servicio cercano y transparente, porque creemos que el cuidado de la piel debe ser accesible para todos.</p>
+    </div>
+  </div>
+
+  <h4 class="sec">Cifras clave del plan</h4>
+  <div class="grid g4">
+    <div class="card stat">
+      <div class="stat-head">
+        <svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#BC92C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+        <div class="lab" style="margin-bottom:0">Ingreso Año 1</div>
+      </div>
+      <div class="val">$353,250</div><div class="delta">Cobertura nacional</div>
+    </div>
+    <div class="card stat tint">
+      <div class="stat-head">
+        <svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#BC92C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+        <div class="lab" style="margin-bottom:0">Ingreso Año 2</div>
+      </div>
+      <div class="val">$621,750</div><div class="delta">▲ 76% con inversionista</div>
+    </div>
+    <div class="card stat">
+      <div class="stat-head">
+        <svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#BC92C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 1.5-2.5 2-2.5 4"></path><line x1="12" y1="17" x2="12" y2="17.5"></line></svg>
+        <div class="lab" style="margin-bottom:0">Beneficio económico</div>
+      </div>
+      <div class="val" style="font-size:19px">$25,039 → $49,555</div><div class="delta">▲ 98% real</div>
+    </div>
+    <div class="card dark stat">
+      <div class="stat-head">
+        <svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#BC92C0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10Z"></path></svg>
+        <div class="lab" style="margin-bottom:0">Horizonte</div>
+      </div>
+      <div class="val txt">De El Salvador a Centroamérica</div>
+      <div class="delta">Vía red Simán CA</div>
+    </div>
+  </div>
+
+  <h4 class="sec" style="margin-top:22px">Objetivos del plan de negocios</h4>
+  <div class="card">
+    <div class="objrow">
+      <span class="objn">1</span>
+      <div><h4>Validar la viabilidad económica del modelo de importación y distribución</h4><p>Aplicar el modelo de producción (beneficio económico, restricciones, eficiencia) para demostrar que Clavis genera una ganancia real neta positiva y creciente, no solo un beneficio contable.</p></div>
+    </div>
+    <div class="objrow">
+      <span class="objn">2</span>
+      <div><h4>Alcanzar cobertura de distribución a nivel nacional desde el Año 1</h4><p>Utilizar la alianza con Almacenes Simán como canal ancla para llegar a los 14 departamentos de El Salvador sin negociar tienda por tienda.</p></div>
+    </div>
+    <div class="objrow">
+      <span class="objn">3</span>
+      <div><h4>Diseñar una estructura de coordinación e incentivos medible</h4><p>Definir porcentajes concretos de comisión sobre cobranza efectiva que alineen el esfuerzo del equipo comercial con la rentabilidad real de la empresa.</p></div>
+    </div>
+    <div class="objrow">
+      <span class="objn">4</span>
+      <div><h4>Incorporar un inversionista estratégico para financiar la expansión</h4><p>Estructurar una ronda de inversión que aporte capital y relaciones comerciales, fortaleciendo la capacidad logística y de negociación con nuevos canales.</p></div>
+    </div>
+    <div class="objrow">
+      <span class="objn">5</span>
+      <div><h4>Sentar las bases para la expansión centroamericana</h4><p>Aprovechar la huella regional de Simán para iniciar en el Año 2 un piloto en Guatemala, replicando el modelo validado en El Salvador.</p></div>
+    </div>
+    <div class="objrow">
+      <span class="objn">6</span>
+      <div><h4>Adoptar una arquitectura legal que blinde el patrimonio y facilite la inversión</h4><p>Constituir Clavis como Sociedad por Acciones Simplificada (S.A.S.) para operar con responsabilidad limitada y estructura apta para recibir capital externo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 01 SEGMENTOS -->
+<section class="panel" id="p-segmentos">
+  <p class="eyebrow">A quién le vendemos y cómo</p>
+  <h1 class="page">Dos modelos de venta, claramente definidos</h1>
+  <p class="sub">Se define con precisión el tipo de cliente de cada canal y si la venta ocurre en línea o en un local físico, tal como lo exige el análisis de comercialización.</p>
+  <div class="grid g2">
+    <div class="card">
+      <span class="tag b2b">B2B — Mayorista</span> <span class="tag fisico">Venta en local físico</span>
+      <h3 class="card-title">Distribuidores que revenden en tienda</h3>
+      <p style="font-size:13px">Clavis vende inventario a distribuidores que revenden al consumidor final <strong>en su propio local</strong>, no en línea:</p>
+      <ul class="mini-list">
+        <li><strong>Almacenes Simán</strong> — canal ancla nacional. Cadena de tiendas por departamento con presencia en los 14 departamentos de El Salvador y huella regional en Centroamérica.</li>
+        <li><strong>Farmacias y tiendas especializadas independientes</strong> — cadenas medianas y locales de barrio con sección de cuidado personal.</li>
+        <li><strong>Spas y salones de belleza</strong> — compran para reventa o uso en servicios propios.</li>
+      </ul>
+    </div>
+    <div class="card tint">
+      <span class="tag b2c">B2C — Consumidor final</span> <span class="tag online">Venta 100% en línea</span>
+      <h3 class="card-title">Cliente que compra directo a Clavis</h3>
+      <p style="font-size:13px">Toda la venta ocurre en línea, sin tienda física propia, con entrega a domicilio en todo el país:</p>
+      <ul class="mini-list">
+        <li><strong>Tienda propia (Shopify)</strong> — catálogo completo, pagos con tarjeta.</li>
+        <li><strong>Redes sociales</strong> (Instagram, TikTok) — descubrimiento y venta asistida por WhatsApp/DM.</li>
+        <li><strong>Entrega</strong> — a domicilio en todo El Salvador vía Boxful (ver pestaña Logística).</li>
+      </ul>
+    </div>
+  </div>
+  <div class="note">
+    <h4>Por qué Simán cambia el modelo</h4>
+    <p>Un solo acuerdo comercial entrega acceso simultáneo a puntos de venta en todo el país, evitando negociar tienda por tienda. Es la diferencia entre operar solo en San Salvador y operar en <strong>todo El Salvador desde el Año 1</strong>, y es también la puerta de entrada a Centroamérica en el Año 2.</p>
+  </div>
+</section>
+
+<!-- 02 CINCO PREGUNTAS -->
+<section class="panel" id="p-preguntas">
+  <p class="eyebrow">Fundamentos de la Producción</p>
+  <h1 class="page">Las cinco preguntas básicas para maximizar el beneficio económico</h1>
+  <p class="quote">"Una empresa es una institución que contrata factores de producción y los organiza para producir y vender bienes y servicios. Su objetivo supremo es maximizar sus beneficios económicos."</p>
+
+  <details open=""><summary>2.1 — ¿Qué y cuánto producir?</summary>
+    <div class="db">
+      <p>Portafolio de <strong>16 SKU</strong> concentrado en serums, protección solar y limpieza facial — las subcategorías de mayor rotación y margen. <strong>Cantidad:</strong> 18,000 unidades en el Año 1, escalando a 32,000 en el Año 2. El volumen lo define la capacidad de absorción de Simán a nivel nacional y la capacidad de capital de trabajo, no la ambición.</p>
+    </div>
+  </details>
+
+  <details><summary>2.2 — ¿Cómo producir? (Tecnología)</summary>
+    <div class="db">
+      <ul class="mini-list" style="font-size:13px">
+        <li><strong>Abastecimiento mixto por arancel:</strong> ~60% del valor CIF desde Corea del Sur (15% de DAI, partida 3304); ~40% desde EE.UU. y Colombia (0% de DAI vía CAFTA-DR/TLC).</li>
+        <li><strong>Bodega-hub nacional de 100 m²</strong> en San Salvador con estantería, control de temperatura y capacidad para abastecer las 8 tiendas Simán y el canal B2C.</li>
+        <li><strong>Fulfillment manual asistido por software</strong> de inventario, integrado a Shopify y a la operación con Boxful.</li>
+        <li><strong>Tercerización del agente aduanal</strong> vía la ventanilla única de CIEX El Salvador.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details><summary>2.3 — ¿Qué producir internamente y qué comprar? (Outsourcing)</summary>
+    <div class="db">
+      <div class="tw"><table>
+        <tbody><tr><th>Actividad</th><th>Decisión</th><th>Fundamento</th></tr>
+        <tr><td>Relación comercial con Simán y farmacias</td><td class="win">Hacer</td><td>Activo estratégico; imitable con dificultad</td></tr>
+        <tr><td>Contenido, comunidad y venta digital</td><td class="win">Hacer</td><td>Conocimiento del cliente acumulativo</td></tr>
+        <tr><td>Control de inventario y lotes</td><td class="win">Hacer</td><td>Costo de una merma excede el de supervisarla</td></tr>
+        <tr><td>Desaduanaje y clasificación arancelaria</td><td>Comprar</td><td>Alta especialización, economías del agente</td></tr>
+        <tr><td>Regencia farmacéutica</td><td>Comprar</td><td>Requisito legal de tiempo parcial</td></tr>
+        <tr><td>Última milla B2C</td><td>Comprar (Boxful)</td><td>Costo unitario inalcanzable operando propio</td></tr>
+        <tr><td>Fabricación del producto</td><td>Comprar</td><td>Requeriría planta y BPM fuera de alcance</td></tr>
+      </tbody></table></div>
+    </div>
+  </details>
+
+  <details><summary>2.4 — ¿Cómo comercializar y fijar precios?</summary>
+    <div class="db">
+      <div class="tw"><table>
+        <tbody><tr><th>Canal</th><th class="n">Precio neto</th><th class="n">Unidades Año 1</th><th>Lógica</th></tr>
+        <tr><td>Almacenes Simán (B2B ancla)</td><td class="n">$16.00</td><td class="n">9,000</td><td>Volumen alto, margen ajustado por poder de negociación del retailer</td></tr>
+        <tr><td>Farmacias/spas (B2B independiente)</td><td class="n">$17.50</td><td class="n">4,500</td><td>Demanda elástica, sin poder de compra masivo</td></tr>
+        <tr><td>E-commerce propio (B2C)</td><td class="n">$29.00</td><td class="n">4,500</td><td>Demanda menos elástica: se paga por curaduría y entrega</td></tr>
+      </tbody></table></div>
+      <p style="font-size:13px">PVP sugerido al público en tienda Simán: <strong>$29.90 con IVA</strong>, coherente con el canal B2C para no generar arbitraje entre canales.</p>
+    </div>
+  </details>
+
+  <details><summary>2.5 — ¿Cómo organizar y remunerar al personal?</summary>
+    <div class="db">
+      <div class="tw"><table>
+        <tbody><tr><th>Puesto</th><th class="n">Salario base</th><th>Esquema de remuneración</th></tr>
+        <tr><td>Gerente de Cuenta Clave — Simán</td><td class="n">$700</td><td>Fijo + comisión <span class="pct">2%</span> sobre cobranza efectiva</td></tr>
+        <tr><td>Encargado Comercial B2B (farmacias/spas)</td><td class="n">$500</td><td>Fijo + comisión <span class="pct">3%</span> sobre cobranza efectiva</td></tr>
+        <tr><td>Community Manager y Atención al Cliente</td><td class="n">$450</td><td>Fijo + bono variable hasta <span class="pct">10%</span> del salario por conversión digital</td></tr>
+        <tr><td>Auxiliar de Logística I y II</td><td class="n">$420 c/u</td><td>Fijo + bono trimestral $50 por exactitud de inventario ≥98%</td></tr>
+      </tbody></table></div>
+      <p style="font-size:13px">Todos los salarios base superan el <strong>salario mínimo del sector comercio de $408.80 mensuales</strong> (MTPS, 2025).</p>
+    </div>
+  </details>
+</section>
+
+<!-- 03 ESCENARIO FINANCIERO -->
+<section class="panel" id="p-escenario">
+  <p class="eyebrow">Análisis Financiero</p>
+  <h1 class="page">Escenario: ingreso total, costos explícitos, implícitos y ganancia real neta</h1>
+  <p class="quote">"Los contadores miden el éxito para el pago de impuestos; los economistas lo miden para pronosticar decisiones. El costo total debe incluir el costo de oportunidad completo."</p>
+
+  <div class="ytoggle-group">
+  <div class="yeartoggle">
+    <button class="ytab active" data-year="y1">Año 1 — Lanzamiento Nacional</button>
+    <button class="ytab" data-year="y2">Año 2 — Expansión con Inversionista</button>
+  </div>
+
+  <div class="year-panel active" data-yr="y1">
+    <div class="grid g4" style="margin-bottom:14px">
+      <div class="card stat"><div class="lab">Ingreso total</div><div class="val">$353,250</div></div>
+      <div class="card stat"><div class="lab">Beneficio contable neto</div><div class="val">$61,539</div><div class="delta">Margen 17.4%</div></div>
+      <div class="card dark stat"><div class="lab">Beneficio económico</div><div class="val">$25,039</div><div class="delta">Margen real 7.09%</div></div>
+      <div class="card stat"><div class="lab">Unidades</div><div class="val">18,000</div></div>
+    </div>
+
+    <h4 class="sec">A. Ingreso total por canal</h4>
+    <div class="tw"><table>
+      <tbody><tr><th>Canal</th><th class="n">Unidades</th><th class="n">Precio neto</th><th class="n">Ingreso</th></tr>
+      <tr><td>Almacenes Simán (B2B ancla nacional)</td><td class="n">9,000</td><td class="n">$16.00</td><td class="n">$144,000.00</td></tr>
+      <tr><td>Farmacias y spas (B2B independiente)</td><td class="n">4,500</td><td class="n">$17.50</td><td class="n">$78,750.00</td></tr>
+      <tr><td>E-commerce propio (B2C nacional)</td><td class="n">4,500</td><td class="n">$29.00</td><td class="n">$130,500.00</td></tr>
+      <tr class="tot"><td>Ingreso total</td><td class="n">18,000</td><td class="n">—</td><td class="n">$353,250.00</td></tr>
+    </tbody></table></div>
+
+    <h4 class="sec">B. Costos explícitos — Landed cost</h4>
+    <div class="tw"><table>
+      <tbody><tr><th>Concepto</th><th class="n">Monto</th></tr>
+      <tr><td>Valor FOB (18,000 u. × $7.00)</td><td class="n">$126,000.00</td></tr>
+      <tr><td>Flete internacional y seguro (8%)</td><td class="n">$10,080.00</td></tr>
+      <tr><td>DAI 15% sobre 60% origen Corea</td><td class="n">$12,247.20</td></tr>
+      <tr><td>DAI 0% sobre 40% origen EE.UU./Colombia</td><td class="n">$0.00</td></tr>
+      <tr><td>Agente aduanal, almacenaje y transporte interno</td><td class="n">$6,000.00</td></tr>
+      <tr class="tot"><td>Landed cost total ($8.57/unidad)</td><td class="n">$154,327.20</td></tr>
+    </tbody></table></div>
+
+    <h4 class="sec">C. Costos explícitos — Gastos de operación</h4>
+    <div class="tw"><table>
+      <tbody><tr><th>Concepto</th><th class="n">Monto</th></tr>
+      <tr><td>Planilla: 5 personas + cargas sociales (30%: ISSS, AFP, INSAFORP, aguinaldo, vacaciones, indemnización)</td><td class="n">$38,844.00</td></tr>
+      <tr><td>Regente farmacéutico</td><td class="n">$3,600.00</td></tr>
+      <tr><td>Trámites sanitarios (16 SKU)</td><td class="n">$4,644.00</td></tr>
+      <tr><td>Alquiler bodega-hub nacional (100 m²)</td><td class="n">$8,400.00</td></tr>
+      <tr><td>Servicios (energía, agua, internet)</td><td class="n">$2,880.00</td></tr>
+      <tr><td>Marketing digital nacional</td><td class="n">$12,000.00</td></tr>
+      <tr><td>E-commerce: plataforma y pasarela de pago (4.5%)</td><td class="n">$6,292.50</td></tr>
+      <tr><td>Empaque y etiquetado secundario</td><td class="n">$2,000.00</td></tr>
+      <tr><td>Logística Boxful (B2C) + distribución a Simán/farmacias (B2B)</td><td class="n">$25,250.00</td></tr>
+      <tr><td>Contabilidad y asesoría legal</td><td class="n">$3,600.00</td></tr>
+      <tr><td>Seguros</td><td class="n">$1,200.00</td></tr>
+      <tr><td>Tasas municipales</td><td class="n">$800.00</td></tr>
+      <tr><td>Contingencias</td><td class="n">$1,500.00</td></tr>
+      <tr class="tot"><td>Subtotal operación</td><td class="n">$111,010.50</td></tr>
+    </tbody></table></div>
+
+    <h4 class="sec">D. Del ingreso al beneficio contable</h4>
+    <div class="tw"><table>
+      <tbody><tr><td>Ingreso total</td><td class="n">$353,250.00</td></tr>
+      <tr><td>(−) Landed cost</td><td class="n">($154,327.20)</td></tr>
+      <tr><td>(−) Gastos de operación</td><td class="n">($111,010.50)</td></tr>
+      <tr><td><strong>(=) Total costos explícitos</strong></td><td class="n"><strong>($265,337.70)</strong></td></tr>
+      <tr><td>(=) Beneficio contable antes de ISR</td><td class="n">$87,912.30</td></tr>
+      <tr><td>(−) ISR 30% (ingresos &gt; $150,000)</td><td class="n">($26,373.69)</td></tr>
+      <tr class="tot"><td>Beneficio contable neto</td><td class="n">$61,538.61</td></tr>
+    </tbody></table></div>
+
+    <h4 class="sec">E. Costos implícitos (el costo de oportunidad que el contador no registra)</h4>
+    <div class="tw"><table>
+      <tbody><tr><th>Costo implícito</th><th class="n">Monto</th><th>Justificación</th></tr>
+      <tr><td>Trabajo de los socios (roles estratégicos y de dirección)</td><td class="n">$18,000.00</td><td>Salario de mercado sacrificado al no emplearse en otra empresa</td></tr>
+      <tr><td>Depreciación económica</td><td class="n">$3,500.00</td><td>Pérdida real de valor de estantería, cómputo y mobiliario</td></tr>
+      <tr><td>Intereses perdidos</td><td class="n">$5,400.00</td><td>6% anual sobre $90,000 de capital propio inmovilizado</td></tr>
+      <tr><td>Beneficio normal (prima de riesgo)</td><td class="n">$7,200.00</td><td>8% sobre $90,000 por riesgo regulatorio, cambiario y de inventario</td></tr>
+      <tr><td>Uso de vehículos y activos personales</td><td class="n">$2,400.00</td><td>Renta de mercado no cobrada al negocio</td></tr>
+      <tr class="tot"><td>Costos implícitos totales</td><td class="n">$36,500.00</td><td></td></tr>
+    </tbody></table></div>
+
+    <h4 class="sec">F. Ganancia real neta (beneficio económico)</h4>
+    <div class="tw"><table>
+      <tbody><tr><th>Resultado</th><th class="n">Monto</th><th class="n">Margen s/ ingreso</th></tr>
+      <tr><td>Beneficio contable neto</td><td class="n">$61,538.61</td><td class="n">17.42%</td></tr>
+      <tr><td>(−) Costos implícitos</td><td class="n">($36,500.00)</td><td class="n">—</td></tr>
+      <tr class="hi"><td>Beneficio económico — ganancia real neta</td><td class="n">$25,038.61</td><td class="n">7.09%</td></tr>
+    </tbody></table></div>
+    <div class="note">
+      <h4>Lectura estratégica</h4>
+      <p>A diferencia de una operación limitada a San Salvador, la cobertura nacional vía Simán entrega un <strong>margen económico real del 7.09%</strong> desde el Año 1: la empresa no solo cubre su costo de oportunidad, sino que genera una ganancia real atractiva, propia de una posición de diferenciación fuerte dentro de la competencia monopolística.</p>
+    </div>
+  </div>
+
+  <div class="year-panel" data-yr="y2">
+    <div class="grid g4" style="margin-bottom:14px">
+      <div class="card stat"><div class="lab">Ingreso total</div><div class="val">$621,750</div><div class="delta">▲ 76% vs. Año 1</div></div>
+      <div class="card stat"><div class="lab">Beneficio contable neto</div><div class="val">$116,255</div><div class="delta">Margen 18.7%</div></div>
+      <div class="card dark stat"><div class="lab">Beneficio económico</div><div class="val">$49,555</div><div class="delta">▲ 98% · margen 7.97%</div></div>
+      <div class="card stat"><div class="lab">Unidades</div><div class="val">32,000</div></div>
+    </div>
+
+    <h4 class="sec">A. Ingreso total por canal</h4>
+    <div class="tw"><table>
+      <tbody><tr><th>Canal</th><th class="n">Unidades</th><th class="n">Precio neto</th><th class="n">Ingreso</th></tr>
+      <tr><td>Simán El Salvador (cobertura total)</td><td class="n">13,000</td><td class="n">$16.00</td><td class="n">$208,000.00</td></tr>
+      <tr><td><strong>Simán Centroamérica (piloto Guatemala)</strong></td><td class="n">5,000</td><td class="n">$16.50</td><td class="n">$82,500.00</td></tr>
+      <tr><td>Farmacias y spas (B2B independiente, ES)</td><td class="n">6,500</td><td class="n">$17.50</td><td class="n">$113,750.00</td></tr>
+      <tr><td>E-commerce propio (B2C, ES + inicio CA)</td><td class="n">7,500</td><td class="n">$29.00</td><td class="n">$217,500.00</td></tr>
+      <tr class="tot"><td>Ingreso total</td><td class="n">32,000</td><td class="n">—</td><td class="n">$621,750.00</td></tr>
+    </tbody></table></div>
+
+    <h4 class="sec">B. Costos explícitos — Landed cost</h4>
+    <div class="tw"><table>
+      <tbody><tr><th>Concepto</th><th class="n">Monto</th></tr>
+      <tr><td>Valor FOB (32,000 u. × $7.00)</td><td class="n">$224,000.00</td></tr>
+      <tr><td>Flete internacional y seguro (7%, mejor tarifa por volumen)</td><td class="n">$15,680.00</td></tr>
+      <tr><td>DAI 15% sobre 55% origen Corea</td><td class="n">$19,773.60</td></tr>
+      <tr><td>DAI 0% sobre 45% origen EE.UU./Colombia</td><td class="n">$0.00</td></tr>
+      <tr><td>Agente aduanal, almacenaje y transporte regional (incl. hub CA)</td><td class="n">$12,000.00</td></tr>
+      <tr class="tot"><td>Landed cost total ($8.48/unidad)</td><td class="n">$271,453.60</td></tr>
+    </tbody></table></div>
+
+    <h4 class="sec">C. Costos explícitos — Gastos de operación</h4>
+    <div class="tw"><table>
+      <tbody><tr><th>Concepto</th><th class="n">Monto</th></tr>
+      <tr><td>Planilla: 6 personas + cargas sociales (30%)</td><td class="n">$59,280.00</td></tr>
+      <tr><td>Regente farmacéutico + asesoría regulatoria CA</td><td class="n">$4,800.00</td></tr>
+      <tr><td>Trámites sanitarios (18 SKU + registros CA)</td><td class="n">$8,100.00</td></tr>
+      <tr><td>Alquiler hub logístico regional (150 m²)</td><td class="n">$10,800.00</td></tr>
+      <tr><td>Servicios</td><td class="n">$3,600.00</td></tr>
+      <tr><td>Marketing nacional consolidado + lanzamiento CA</td><td class="n">$24,000.00</td></tr>
+      <tr><td>E-commerce: plataforma ampliada y pasarela de pago</td><td class="n">$10,387.50</td></tr>
+      <tr><td>Empaque y etiquetado secundario</td><td class="n">$3,500.00</td></tr>
+      <tr><td>Logística Boxful (B2C) + distribución regional Simán/farmacias</td><td class="n">$43,750.00</td></tr>
+      <tr><td>Contabilidad y gobierno corporativo (reporting a inversionista)</td><td class="n">$6,000.00</td></tr>
+      <tr><td>Seguros</td><td class="n">$2,000.00</td></tr>
+      <tr><td>Tasas municipales</td><td class="n">$1,000.00</td></tr>
+      <tr><td>Contingencias</td><td class="n">$3,000.00</td></tr>
+      <tr><td>Honorarios de gobernanza al inversionista</td><td class="n">$4,000.00</td></tr>
+      <tr class="tot"><td>Subtotal operación</td><td class="n">$184,217.50</td></tr>
+    </tbody></table></div>
+
+    <h4 class="sec">D. Del ingreso al beneficio contable</h4>
+    <div class="tw"><table>
+      <tbody><tr><td>Ingreso total</td><td class="n">$621,750.00</td></tr>
+      <tr><td>(−) Landed cost</td><td class="n">($271,453.60)</td></tr>
+      <tr><td>(−) Gastos de operación</td><td class="n">($184,217.50)</td></tr>
+      <tr><td><strong>(=) Total costos explícitos</strong></td><td class="n"><strong>($455,671.10)</strong></td></tr>
+      <tr><td>(=) Beneficio contable antes de ISR</td><td class="n">$166,078.90</td></tr>
+      <tr><td>(−) ISR 30%</td><td class="n">($49,823.67)</td></tr>
+      <tr class="tot"><td>Beneficio contable neto</td><td class="n">$116,255.23</td></tr>
+    </tbody></table></div>
+
+    <h4 class="sec">E. Costos implícitos</h4>
+    <div class="tw"><table>
+      <tbody><tr><th>Costo implícito</th><th class="n">Monto</th><th>Justificación</th></tr>
+      <tr><td>Trabajo de los socios en roles estratégicos</td><td class="n">$24,000.00</td><td>Dirección comercial regional y gobernanza con el inversionista</td></tr>
+      <tr><td>Depreciación económica</td><td class="n">$5,500.00</td><td>Equipo, mobiliario y activos del hub regional</td></tr>
+      <tr><td>Costo de capital</td><td class="n">$14,400.00</td><td>6% sobre $240,000 (capital propio + aporte del inversionista)</td></tr>
+      <tr><td>Beneficio normal (prima de riesgo)</td><td class="n">$19,200.00</td><td>8% sobre $240,000, riesgo de expansión regional</td></tr>
+      <tr><td>Vehículos y activos regionales</td><td class="n">$3,600.00</td><td>Uso no facturado al negocio</td></tr>
+      <tr class="tot"><td>Costos implícitos totales</td><td class="n">$66,700.00</td><td></td></tr>
+    </tbody></table></div>
+
+    <h4 class="sec">F. Ganancia real neta (beneficio económico)</h4>
+    <div class="tw"><table>
+      <tbody><tr><th>Resultado</th><th class="n">Monto</th><th class="n">Margen s/ ingreso</th></tr>
+      <tr><td>Beneficio contable neto</td><td class="n">$116,255.23</td><td class="n">18.70%</td></tr>
+      <tr><td>(−) Costos implícitos</td><td class="n">($66,700.00)</td><td class="n">—</td></tr>
+      <tr class="hi"><td>Beneficio económico — ganancia real neta</td><td class="n">$49,555.23</td><td class="n">7.97%</td></tr>
+    </tbody></table></div>
+  </div>
+  </div>
+
+  <div class="note">
+    <h4>Trayectoria financiera</h4>
+    <p>El beneficio económico <strong>casi se duplica (+98%)</strong> mientras el ingreso crece 76%: el margen real mejora de 7.09% a 7.97% incluso absorbiendo el costo de entrada a un nuevo país. Es una trayectoria de crecimiento con margen que se fortalece, no que se diluye.</p>
+  </div>
+</section>
+
+<!-- 04 RESTRICCIONES -->
+<section class="panel" id="p-restricciones">
+  <p class="eyebrow">Límites del Crecimiento</p>
+  <h1 class="page">Las tres restricciones al beneficio</h1>
+  <p class="quote">"El crecimiento de los beneficios de una empresa no es infinito. Está contenido dentro de un perímetro definido por su entorno y sus capacidades físicas."</p>
+
+  <details open=""><summary>4.1 — Restricción tecnológica</summary>
+    <div class="db">
+      <div class="tw"><table>
+        <tbody><tr><th>Límite físico</th><th>Techo actual</th><th>Costo de romperlo</th></tr>
+        <tr><td>Capacidad de picking/packing en hub nacional</td><td>~120 pedidos B2B+B2C por día</td><td>Personal adicional o segundo hub regional</td></tr>
+        <tr><td>Capacidad volumétrica del hub (100 m²)</td><td>~22,000 unidades en inventario</td><td>Ampliación a 150 m² (+$400/mes)</td></tr>
+        <tr><td>Ciclo de importación (pedido a venta)</td><td>90 a 120 días</td><td>Flete aéreo, que multiplica el costo</td></tr>
+        <tr><td>Capacidad de reposición a 8 tiendas Simán</td><td>1 ciclo de reposición semanal</td><td>Aumentar frecuencia exige más personal logístico</td></tr>
+      </tbody></table></div>
+    </div>
+  </details>
+
+  <details><summary>4.2 — Restricción de información</summary>
+    <div class="db">
+      <div class="tw"><table>
+        <tbody><tr><th>Zona de incertidumbre</th><th>Riesgo económico concreto</th></tr>
+        <tr><td>Plazo regulatorio</td><td>No se conoce cuánto tardará la aprobación de registros sanitarios en El Salvador ni en Guatemala</td></tr>
+        <tr><td>Tendencia de consumo</td><td>El skincare se mueve por virales; un producto de moda hoy puede no rotar en 8 meses</td></tr>
+        <tr><td>Esfuerzo del equipo comercial en tienda Simán</td><td>Es costoso verificar si la caída en ventas es por esfuerzo de reposición o por demanda real</td></tr>
+        <tr><td>Competencia dentro de la misma góndola Simán</td><td>No se conoce cuándo un competidor negociará mejor espacio o precio</td></tr>
+      </tbody></table></div>
+      <p style="font-size:13px">La línea de <strong>contingencias de $1,500 (Año 1) y $3,000 (Año 2)</strong> es el precio explícito que Clavis paga por esta incertidumbre.</p>
+    </div>
+  </details>
+
+  <details><summary>4.3 — Restricción de mercado</summary>
+    <div class="db">
+      <div class="tw"><table>
+        <tbody><tr><th>Frontera de mercado</th><th>Evidencia</th></tr>
+        <tr><td>Disposición a pagar</td><td>Con salario mínimo de $408.80, un producto de $29.90 representa el 7.3% del ingreso mensual: techo de precio real</td></tr>
+        <tr><td>Poder de negociación de Simán</td><td>Como socio ancla, Simán fija condiciones de precio de compra ($16.00) y plazos, limitando el margen unitario de ese canal</td></tr>
+        <tr><td>Precio de competidores en la misma góndola</td><td>Otras marcas de skincare en Simán fijan el precio de referencia al público</td></tr>
+        <tr><td>Elasticidad del canal B2B independiente</td><td>Farmacias solo compran si su margen de reventa sobrevive: piso duro en $17.50</td></tr>
+      </tbody></table></div>
+      <p style="font-size:13px">El ingreso de $353,250 <strong>no es una meta ambiciosa, es un techo de mercado realista</strong> dado el poder de negociación de los canales.</p>
+    </div>
+  </details>
+</section>
+
+<!-- 05 DUALIDAD EFICIENCIA -->
+<section class="panel" id="p-eficiencia">
+  <p class="eyebrow">Optimización Operativa</p>
+  <h1 class="page">Análisis de la dualidad de la eficiencia aplicado a Clavis</h1>
+  <p class="quote">"Un método que utiliza tecnología de punta no siempre es el más rentable. Un método económicamente eficiente siempre es tecnológicamente eficiente, pero no a la inversa."</p>
+
+  <div class="grid g2">
+    <div class="card"><h4 class="sec" style="margin-top:0">Eficiencia tecnológica</h4><p style="font-size:13px">Despachar una cantidad determinada de pedidos usando la <strong>menor cantidad física de insumos</strong>. No depende de los precios.</p></div>
+    <div class="card tint"><h4 class="sec" style="margin-top:0">Eficiencia económica</h4><p style="font-size:13px">Despachar esa misma cantidad al <strong>costo más bajo posible</strong>. Depende enteramente de salarios frente a renta de capital.</p></div>
+  </div>
+
+  <h4 class="sec">Matriz de decisión: tres métodos de fulfillment para el hub nacional (≈1,500 pedidos/mes)</h4>
+  <div class="tw"><table>
+    <tbody><tr><th>Método</th><th>Configuración</th><th>Trabajo</th><th>Capital y software</th></tr>
+    <tr><td>A — Automatizado</td><td>Sistema WMS + banda transportadora</td><td>2 empleados ($500 c/u)</td><td>3PL y WMS: $2,200/mes</td></tr>
+    <tr><td>B — Semiautomatizado</td><td>Personal con software de apoyo</td><td>5 empleados ($440 c/u)</td><td>Software de inventario: $180/mes</td></tr>
+    <tr><td>C — Manual</td><td>Puro trabajo, casi sin capital</td><td>10 empleados ($410 c/u)</td><td>Hojas de cálculo: $30/mes</td></tr>
+  </tbody></table></div>
+  <p style="font-size:13px">Los tres son <strong>tecnológicamente eficientes</strong> (ninguno usa más de un insumo y más del otro simultáneamente); el filtro tecnológico no decide, se necesita el filtro de precios. Factor de carga laboral de <strong>1.30</strong> (ISSS, AFP, INSAFORP, aguinaldo, vacaciones, indemnización).</p>
+
+  <div class="grid g2">
+    <div class="card">
+      <h4 class="sec" style="margin-top:0">Escenario El Salvador — trabajo barato</h4>
+      <div class="tw"><table>
+        <tbody><tr><th>Método</th><th class="n">Trabajo</th><th class="n">Capital</th><th class="n">Total</th></tr>
+        <tr><td>A</td><td class="n">$1,300</td><td class="n">$2,200</td><td class="n">$3,500</td></tr>
+        <tr class="hi"><td>B</td><td class="n">$2,860</td><td class="n">$180</td><td class="n">$3,040</td></tr>
+        <tr><td>C</td><td class="n">$5,330</td><td class="n">$30</td><td class="n">$5,360</td></tr>
+      </tbody></table></div>
+      <p style="font-size:12.5px;color:var(--violeta);font-weight:700;margin-top:6px">Gana el Método B</p>
+    </div>
+    <div class="card">
+      <h4 class="sec" style="margin-top:0">Escenario Estados Unidos — trabajo caro</h4>
+      <div class="tw"><table>
+        <tbody><tr><th>Método</th><th class="n">Trabajo</th><th class="n">Capital</th><th class="n">Total</th></tr>
+        <tr class="hi"><td>A</td><td class="n">$5,200</td><td class="n">$2,200</td><td class="n">$7,400</td></tr>
+        <tr><td>B</td><td class="n">$13,000</td><td class="n">$180</td><td class="n">$13,180</td></tr>
+        <tr><td>C</td><td class="n">$26,000</td><td class="n">$30</td><td class="n">$26,030</td></tr>
+      </tbody></table></div>
+      <p style="font-size:12.5px;color:var(--violeta);font-weight:700;margin-top:6px">Gana el Método A</p>
+    </div>
+  </div>
+  <div class="note">
+    <h4>Conclusión de la dualidad</h4>
+    <p><strong>La tecnología no cambió. Los precios de los factores sí. Y la respuesta óptima se invirtió por completo.</strong> En El Salvador, con trabajo relativamente barato, Clavis debe seguir siendo intensiva en trabajo dentro del hub nacional; automatizar prematuramente sería tecnológicamente elegante y económicamente ineficiente. El punto de indiferencia entre B y A ocurre en aproximadamente <strong>$780/mes de costo laboral cargado por empleado</strong>; si el salario mínimo cruza ese umbral, Clavis debe migrar al Método A — exactamente el riesgo que enfrentó la industria juguetera mexicana del caso de clase.</p>
+  </div>
+</section>
+
+<!-- 06 COORDINACIÓN -->
+<section class="panel" id="p-coordinacion">
+  <p class="eyebrow">Gobernanza Interna</p>
+  <h1 class="page">Sistema de coordinación interna</h1>
+  <p class="quote">"Para superar las restricciones de información, las empresas combinan dos arquitecturas de gestión."</p>
+  <p class="sub">Clavis adopta un <strong>modelo mixto</strong>: mando donde la supervisión es fácil y barata, incentivos donde el esfuerzo es difícil de observar.</p>
+
+  <h4 class="sec" style="margin-top:0">Organigrama del personal</h4>
+  <div class="ytoggle-group">
+  <div class="yeartoggle">
+    <button class="ytab active" data-year="y1">Año 1 — 5 personas</button>
+    <button class="ytab" data-year="y2">Año 2 — 6 personas + Inversionista</button>
+  </div>
+
+  <!-- ORGANIGRAMA AÑO 1 -->
+  <div class="year-panel active" data-yr="y1">
+    <div class="org-wrap">
+      <div class="org-tree">
+        <ul>
+          <li>
+            <div class="obox dark">Socios / Dirección</div>
+            <ul>
+              <li><div class="obox">Gerente Cuenta Clave — Simán<span class="otag inc">2% cobranza</span></div></li>
+              <li><div class="obox">Encargado Comercial B2B<span class="otag inc">3% cobranza</span></div></li>
+              <li><div class="obox">Community Manager<span class="otag inc">bono hasta 10%</span></div></li>
+              <li><div class="obox">Auxiliares de Logística I y II<span class="otag inc">bono $50/trim.</span></div></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="ext-row-wrap">
+        <div class="ext-label">Apoyo externo — fuera de nómina (relación de servicio, no jerárquica)</div>
+        <div class="ext-row">
+          <span class="ext-pill">Regente farmacéutico</span>
+          <span class="ext-pill">Contador y asesoría legal</span>
+          <span class="ext-pill">Agente aduanal</span>
+          <span class="ext-pill">Boxful (última milla)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ORGANIGRAMA AÑO 2 -->
+  <div class="year-panel" data-yr="y2">
+    <div class="org-wrap">
+      <div class="gov-row">
+        <div class="gov-box">Inversionista Estratégico<br><span style="font-size:9.5px;font-weight:500">25% de participación</span></div>
+        <div class="gov-line"></div>
+        <div class="gov-box">Socios / Dirección<span class="otag gov" style="display:block;margin-top:4px">Pacto de accionistas</span></div>
+      </div>
+      <div class="gov-label">Relación de gobernanza (agente-principal) — no jerárquica</div>
+      <div class="org-tree">
+        <ul>
+          <li>
+            <div class="obox dark">Socios / Dirección</div>
+            <ul>
+              <li>
+                <div class="obox">Director Comercial Regional</div>
+                <ul>
+                  <li><div class="obox">Encargado B2B El Salvador<span class="otag inc">2.5% cobranza</span></div></li>
+                  <li><div class="obox">Encargado B2B Centroamérica<span class="otag inc">2.5% cobranza</span></div></li>
+                </ul>
+              </li>
+              <li><div class="obox">Community Manager<span class="otag inc">bono hasta 10%</span></div></li>
+              <li><div class="obox">Auxiliares de Logística I y II<span class="otag inc">bono $50/trim.</span></div></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="ext-row-wrap">
+        <div class="ext-label">Apoyo externo — fuera de nómina (relación de servicio, no jerárquica)</div>
+        <div class="ext-row">
+          <span class="ext-pill">Regente farmacéutico + asesoría regulatoria CA</span>
+          <span class="ext-pill">Contador y gobierno corporativo</span>
+          <span class="ext-pill">Agente aduanal regional</span>
+          <span class="ext-pill">Boxful (última milla)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="legend">
+    <span><span class="dot mando"></span> Puesto bajo supervisión directa (mando)</span>
+    <span><span class="dot inc"></span> Componente variable con % definido (incentivo)</span>
+    <span><span class="dot gov"></span> Relación de gobernanza con el inversionista</span>
+  </div>
+
+  <div class="grid g2" style="margin-top:22px">
+    <div class="card">
+      <h3 class="card-title">Sistemas de mando (jerarquía)</h3>
+      <div class="tw"><table>
+        <tbody><tr><th>Área</th><th>Por qué mando</th></tr>
+        <tr><td>Recepción, control de lotes y caducidad</td><td>Verificable al 100% en el acto; error genera producto no vendible</td></tr>
+        <tr><td>Cumplimiento sanitario y BPM en bodega</td><td>Obligación regulatoria, se ejecuta por protocolo</td></tr>
+        <tr><td>Precio de venta a Simán y farmacias</td><td>Autorizar descuentos por criterio individual erosiona el margen negociado</td></tr>
+        <tr><td>Cumplimiento del regente farmacéutico</td><td>Responsabilidad legal indelegable</td></tr>
+      </tbody></table></div>
+    </div>
+    <div class="card tint">
+      <h3 class="card-title">Sistemas de incentivos (mercado interno) — con porcentaje definido</h3>
+      <div class="tw"><table>
+        <tbody><tr><th>Puesto</th><th>Métrica</th><th>% definido</th></tr>
+        <tr><td>Gerente Cuenta Clave Simán</td><td>Cobranza efectiva a Simán</td><td><span class="pct">2.0%</span></td></tr>
+        <tr><td>Encargado Comercial B2B independiente</td><td>Cobranza efectiva farmacias/spas</td><td><span class="pct">3.0%</span></td></tr>
+        <tr><td>Community Manager</td><td>Conversión y ventas B2C</td><td><span class="pct">hasta 10%</span></td></tr>
+        <tr><td>Auxiliares de Logística</td><td>Exactitud de inventario ≥98% y despacho ≥97% a tiempo</td><td>Bono fijo $50/trimestre</td></tr>
+      </tbody></table></div>
+    </div>
+  </div>
+
+  <div class="note">
+    <h4>Decisión crítica de diseño</h4>
+    <p>Ambos comerciales cobran su porcentaje <strong>sobre cobranza efectiva y no sobre venta facturada</strong>. Esto evita que coloquen inventario en cuentas que no van a pagar a tiempo, transfiriendo el riesgo de cartera a la empresa mientras ellos ya cobraron su comisión. <strong>Síntesis:</strong> mando donde el resultado es verificable y el error es caro; incentivos porcentuales donde el esfuerzo es invisible y el resultado (cobranza, conversión) es medible.</p>
+  </div>
+</section>
+
+<!-- 07 AGENTE-PRINCIPAL -->
+<section class="panel" id="p-agente">
+  <p class="eyebrow">Gobernanza y Riesgo</p>
+  <h1 class="page">El problema del agente y el principal aplicado a Clavis</h1>
+  <p class="quote">"El conflicto central: los accionistas buscan rentabilidad, los gerentes y empleados buscan maximizar su propio bienestar."</p>
+  <p class="sub"><strong>Sí aplica a Clavis</strong>, con mayor intensidad a partir del Año 2 cuando ingresa el inversionista estratégico.</p>
+
+  <h4 class="sec">Mapa de relaciones</h4>
+  <div class="tw"><table>
+    <tbody><tr><th>Principal</th><th>Agente</th><th>Meta del principal</th><th>Meta del agente</th><th>Intensidad</th></tr>
+    <tr><td>Socios</td><td>Gerente Cuenta Clave Simán</td><td>Cartera sana y crecimiento del acuerdo</td><td>Maximizar comisión con mínimo esfuerzo</td><td class="win">Alta</td></tr>
+    <tr><td>Socios</td><td>Encargado Comercial B2B</td><td>Beneficio económico y cartera sana</td><td>Maximizar comisión con mínimo esfuerzo</td><td class="win">Alta</td></tr>
+    <tr><td>Socios</td><td>Regente farmacéutico</td><td>Registros aprobados a tiempo</td><td>Minimizar horas por honorario fijo</td><td>Media</td></tr>
+    <tr><td><strong>Inversionista estratégico</strong></td><td><strong>Socios fundadores</strong></td><td>Retorno sobre el capital y expansión regional</td><td>Preservar control operativo y visión de marca</td><td class="win">Alta (nueva, Año 2)</td></tr>
+    <tr><td>Clavis</td><td>Boxful (última milla)</td><td>Entrega íntegra y puntual</td><td>Maximizar paradas por ruta</td><td>Baja</td></tr>
+  </tbody></table></div>
+
+  <h4 class="sec">Los conflictos más costosos</h4>
+  <ul class="mini-list" style="font-size:13px">
+    <li><strong>Venta frente a cobranza:</strong> resuelto al comisionar sobre cobranza efectiva (2% y 3%, ver pestaña Coordinación).</li>
+    <li><strong>El regente de honorario fijo:</strong> minimiza horas si no hay incentivo por velocidad de aprobación de registros.</li>
+    <li><strong>Inversionista frente a socios fundadores (nuevo en Año 2):</strong> el inversionista prioriza retorno y salida a mediano plazo; los socios priorizan control de marca y reinversión continua. Es el conflicto de gobernanza más relevante a partir de la ronda de inversión.</li>
+  </ul>
+
+  <h4 class="sec">Mecanismos de resolución</h4>
+  <div class="tw"><table>
+    <tbody><tr><th>Mecanismo</th><th>Aplicación concreta</th></tr>
+    <tr><td><strong>Copropiedad</strong></td><td>Inversionista recibe 25% de participación (ver pauta de valuación); Gerente Cuenta Clave Simán accede a un plan de participación del 3% en utilidades desde el Año 3 sujeto a metas de expansión CA</td></tr>
+    <tr><td><strong>Pago de incentivos</strong></td><td>Comisiones de 2% y 3% sobre cobranza; bono de Community Manager hasta 10% del salario; honorario por hito al regente por registro aprobado en plazo</td></tr>
+    <tr><td><strong>Contratos a largo plazo</strong></td><td><strong>Pacto de accionistas</strong> firmado con el inversionista que define política de reinversión de utilidades, derechos de veto, cláusula de salida (drag-along/tag-along) y horizonte mínimo de permanencia de 3 años</td></tr>
+  </tbody></table></div>
+  <div class="note">
+    <h4>El riesgo real al escalar</h4>
+    <p>Con 5 a 6 empleados y socios presentes en la operación diaria, la asimetría de información es baja. El mayor riesgo de agente-principal <strong>no es interno, es con el nuevo inversionista</strong>: por eso el pacto de accionistas debe firmarse antes de recibir el capital, no después.</p>
+  </div>
+</section>
+
+<!-- 08 LEGAL -->
+<section class="panel" id="p-legal">
+  <p class="eyebrow">Estructura Corporativa</p>
+  <h1 class="page">Arquitectura legal: por qué Sociedad por Acciones Simplificada</h1>
+  <p class="quote">"Cada modelo jurídico es una respuesta distinta al problema del riesgo, el capital y la tributación."</p>
+
+  <h4 class="sec">Comparativa de los tres modelos disponibles</h4>
+  <div class="tw"><table>
+    <tbody><tr><th>Criterio</th><th>Propiedad individual</th><th>Sociedad de personas</th><th>Corporación (S.A. de C.V. / S.A.S.)</th></tr>
+    <tr><td>Responsabilidad</td><td>Ilimitada</td><td>Ilimitada y solidaria</td><td class="win">Limitada al aporte</td></tr>
+    <tr><td>Acceso a capital</td><td>Limitado a la riqueza del dueño</td><td>Mayor base, habilidades diversas</td><td class="win">Amplio, admite inversionista</td></tr>
+    <tr><td>Tributación</td><td>Renta personal</td><td>Relativamente simple</td><td>Riesgo de doble tributación</td></tr>
+    <tr><td>Continuidad</td><td>Sobrevive poco al dueño</td><td>Frágil ante salida de un socio</td><td class="win">Vida perpetua</td></tr>
+    <tr><td>Problema agente-principal</td><td>Inexistente</td><td>Bajo</td><td>Se agudiza (relevante con inversionista)</td></tr>
+  </tbody></table></div>
+
+  <h4 class="sec">Por qué se descartan los modelos de responsabilidad ilimitada</h4>
+  <ul class="mini-list" style="font-size:13px">
+    <li><strong>Riesgo de responsabilidad por producto:</strong> productos de aplicación tópica distribuidos a nivel nacional en Simán; una reacción adversa alcanzaría el patrimonio personal sin blindaje.</li>
+    <li><strong>Riesgo regulatorio sanitario:</strong> sanciones por incumplimiento en 16-18 SKU y en dos países (Año 2).</li>
+    <li><strong>Riesgo de crédito comercial:</strong> Simán y farmacias exigen plazo de pago, generando cartera y exposición.</li>
+    <li><strong>Requisito del inversionista:</strong> ningún inversionista estratégico aporta capital a una figura de responsabilidad ilimitada.</li>
+  </ul>
+
+  <div class="note">
+    <h4>Decisión: Clavis, S.A.S.</h4>
+    <p>Capital desde $1.00, inscripción digital exenta de aranceles registrales hasta el 31 de diciembre de 2026, responsabilidad limitada al aporte, y <strong>gobierno corporativo flexible</strong> que facilita el pacto de accionistas con el inversionista del Año 2. Es la arquitectura de entrada; se evaluará su conversión a S.A. de C.V. si un futuro inversionista institucional o un banco lo exige para créditos de mayor monto.</p>
+  </div>
+
+  <h4 class="sec">Ruta de formalización (orden obligatorio)</h4>
+  <ol style="font-size:13px;padding-left:18px;color:rgba(13,13,56,.82)">
+    <li>Inscripción de Clavis, S.A.S. ante el Registro de Comercio (arancel exento en 2026).</li>
+    <li>Matrícula de empresa, NIT y NRC ante Hacienda.</li>
+    <li>Inscripción patronal en ISSS, AFP y MTPS.</li>
+    <li>Licencia municipal de funcionamiento.</li>
+    <li>Licencia de establecimiento sanitario como distribuidor de cosméticos.</li>
+    <li>Registro sanitario RTCA por cada SKU.</li>
+    <li>Inscripción como importador ante la ventanilla única de comercio exterior (CIEX).</li>
+    <li>Firma del pacto de accionistas <strong>antes</strong> de recibir el capital del inversionista (Año 2).</li>
+  </ol>
+</section>
+
+<!-- 09 LOGÍSTICA -->
+<section class="panel" id="p-logistica">
+  <p class="eyebrow">Del clic a la puerta de tu casa</p>
+  <h1 class="page">Logística de envíos y entregas</h1>
+  <p class="sub">"En nuestra plataforma garantizamos una experiencia de compra ágil, eficiente y transparente. Trabajamos en alianza estratégica con <strong>Boxful</strong>, asegurando el rastreo y la entrega segura de cada producto directamente hasta la puerta de tu casa."</p>
+
+  <div class="grid g2">
+    <div class="card tint">
+      <span class="tag online">Entrega el mismo día</span>
+      <h3 class="card-title">San Salvador y Santa Tecla</h3>
+      <p style="font-size:13px">Pedidos dentro de estas zonas urbanas centrales se entregan <strong>el mismo día</strong>.</p>
+    </div>
+    <div class="card">
+      <span class="tag fisico">Cobertura nacional</span>
+      <h3 class="card-title">Resto del país</h3>
+      <p style="font-size:13px">Tu paquete llega en un <strong>plazo máximo de 24 horas</strong>, en cualquier departamento de El Salvador.</p>
+    </div>
+  </div>
+
+  <h4 class="sec">El proceso, paso a paso</h4>
+  <div class="flow">
+    <div class="flow-step"><div class="n">01</div><h4>Compra</h4><p>La tarifa de envío se calcula por zona de forma transparente al pagar.</p></div>
+    <div class="arrow">→</div>
+    <div class="flow-step"><div class="n">02</div><h4>Preparación</h4><p>Clavis empaca en el hub y genera la guía con Boxful.</p></div>
+    <div class="arrow">→</div>
+    <div class="flow-step"><div class="n">03</div><h4>Recolección</h4><p>Boxful recoge según ruta programada del día.</p></div>
+    <div class="arrow">→</div>
+    <div class="flow-step"><div class="n">04</div><h4>Entrega a domicilio</h4><p>Mismo día en zona central; 24h en el resto del país.</p></div>
+    <div class="arrow">→</div>
+    <div class="flow-step"><div class="n">05</div><h4>Rastreo y confirmación</h4><p>Cliente sigue su pedido en tiempo real.</p></div>
+  </div>
+
+  <div class="note">
+    <h4>Distribución B2B — diferente de la entrega a domicilio</h4>
+    <p>Los pedidos a Simán, farmacias y spas <strong>no viajan por Boxful</strong>: se entregan en lotes consolidados a sus centros de distribución o tiendas, con transporte de carga contratado, optimizando el costo por volumen (partida "distribución a Simán/farmacias" del presupuesto de operación).</p>
+  </div>
+</section>
+
+<!-- 10 ANEXOS -->
+<section class="panel" id="p-anexos">
+  <p class="eyebrow">Fuentes y notas metodológicas</p>
+  <h1 class="page">Anexos</h1>
+
+  <details open=""><summary>Nota metodológica</summary>
+    <div class="db"><p style="font-size:13px">Las cifras financieras son proyecciones propias construidas sobre parámetros oficiales verificables: salario mínimo, tasas de ISR e IVA, DAI de la partida 3304 y tarifario sanitario. Los precios pactados con Simán, los volúmenes de expansión regional y la ronda de inversión son <strong>supuestos estratégicos del proyecto</strong> con fines académicos, y deben validarse con negociación comercial real antes de su ejecución.</p></div>
+  </details>
+
+  <details><summary>Referencias (formato APA)</summary>
+    <div class="db refs">
+      <div>Asamblea Legislativa de El Salvador. (2023). <em>Decreto Legislativo N.° 905: incorporación de la Sociedad por Acciones Simplificada</em>.</div>
+      <div>Centro Nacional de Registros. (2026). <em>Registro de Comercio: inscripción de S.A.S.</em></div>
+      <div>Coase, R. H. (1937). The nature of the firm. <em>Economica</em>, 4(16), 386–405.</div>
+      <div>Jensen, M. C., &amp; Meckling, W. H. (1976). Theory of the firm. <em>Journal of Financial Economics</em>, 3(4), 305–360.</div>
+      <div>Ministerio de Hacienda de El Salvador. (2025). <em>Ley de ISR y Ley de IVA</em>.</div>
+      <div>Ministerio de Trabajo y Previsión Social. (2025). <em>Tarifas de salarios mínimos vigentes</em>.</div>
+      <div>Secretaría de Integración Económica Centroamericana. (2025). <em>Sistema Arancelario Centroamericano, capítulo 33</em>.</div>
+      <div>Superintendencia de Regulación Sanitaria. (2026). <em>Tarifario de registro sanitario de cosméticos</em>.</div>
+    </div>
+  </details>
+</section>
+
+</main>
+
+<footer>Clavis, S.A.S. — Every door leads somewhere · Plan de Negocios El Salvador → Centroamérica · 2026</footer>
+
+<script>
+  var tabs = document.querySelectorAll('.tab-btn');
+  var panels = document.querySelectorAll('.panel');
+  tabs.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      tabs.forEach(function(b){b.classList.remove('active')});
+      panels.forEach(function(p){p.classList.remove('active')});
+      btn.classList.add('active');
+      document.getElementById('p-'+btn.dataset.tab).classList.add('active');
+      window.scrollTo({top:0,behavior:'smooth'});
+    });
+  });
+
+  var groups = document.querySelectorAll('.ytoggle-group');
+  groups.forEach(function(g){
+    var btns = g.querySelectorAll('.ytab');
+    btns.forEach(function(btn){
+      btn.addEventListener('click', function(){
+        btns.forEach(function(b){b.classList.remove('active')});
+        g.querySelectorAll('.year-panel').forEach(function(p){p.classList.remove('active')});
+        btn.classList.add('active');
+        var target = g.querySelector('.year-panel[data-yr="'+btn.dataset.year+'"]');
+        if(target){ target.classList.add('active'); }
+      });
+    });
+  });
+</script>
+
+</body></html>
