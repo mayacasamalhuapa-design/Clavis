@@ -1,0 +1,891 @@
+<html data-type="html" data-identifier="713507e3-23aa-42cf-8f43-8cab6d00c9d1" data-title="Clavis — Plan de Negocios | Sitio Elegante" data-version="1" width="1200" height="900"><head>
+<meta charset="utf-8">
+<style>
+  :root{
+    --lila:#F4DAF6;
+    --malva:#BC92C0;
+    --violeta:#5D5B9B;
+    --indigo:#333769;
+    --tinta:#0D0D38;
+    --papel:#FDFBFD;
+    --blanco:#FFFFFF;
+    --linea:rgba(188,146,192,.34);
+    --linea-suave:rgba(93,91,155,.14);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter','Segoe UI',-apple-system,'Helvetica Neue',Arial,sans-serif;
+    background:var(--papel);
+    color:var(--tinta);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.62;
+    font-size:15px;
+  }
+
+  /* ============ PANEL SUPERIOR ============ */
+  #top-panel{
+    position:sticky;top:0;z-index:100;
+    background:rgba(253,251,253,.94);
+    backdrop-filter:saturate(180%) blur(14px);
+    border-bottom:1px solid var(--linea);
+  }
+  .bar{
+    max-width:1120px;margin:0 auto;padding:20px 32px 16px;
+    display:flex;align-items:center;justify-content:space-between;gap:24px;
+  }
+  .brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+  .brand svg{display:block}
+  .brand-txt{display:flex;flex-direction:column;line-height:1.1}
+  .brand-name{
+    font-size:19px;font-weight:600;letter-spacing:.34em;color:var(--tinta);
+  }
+  .brand-tag{
+    font-size:8.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--malva);margin-top:5px;
+  }
+  .bar-meta{
+    text-align:right;font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--violeta);font-weight:500;
+  }
+  .bar-meta span{display:block;color:var(--malva);margin-top:4px;letter-spacing:.14em}
+
+  nav.sections{
+    max-width:1120px;margin:0 auto;padding:0 32px;
+    display:flex;align-items:stretch;gap:2px;
+  }
+  .nav-item{position:relative}
+  .nav-item > a{
+    display:block;padding:11px 13px 13px;
+    font-size:10.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;
+    color:var(--indigo);text-decoration:none;
+    border-bottom:2px solid transparent;transition:.22s;white-space:nowrap;
+  }
+  .nav-item > a .idx{color:var(--malva);margin-right:6px;font-weight:500}
+  .nav-item:hover > a{color:var(--violeta);border-bottom-color:var(--malva)}
+  .nav-item > a.active{color:var(--tinta);border-bottom-color:var(--violeta)}
+  .dropdown{
+    position:absolute;top:100%;left:0;min-width:250px;
+    background:var(--blanco);
+    border:1px solid var(--linea);
+    box-shadow:0 18px 44px -18px rgba(13,13,56,.28);
+    padding:9px 0;list-style:none;
+    opacity:0;visibility:hidden;transform:translateY(-5px);
+    transition:.2s;
+  }
+  .nav-item:hover .dropdown{opacity:1;visibility:visible;transform:translateY(0)}
+  .dropdown a{
+    display:block;padding:8px 20px;font-size:12px;color:var(--indigo);
+    text-decoration:none;transition:.16s;border-left:2px solid transparent;
+  }
+  .dropdown a:hover{background:rgba(244,218,246,.5);color:var(--tinta);border-left-color:var(--malva)}
+  .dropdown a i{font-style:normal;color:var(--malva);margin-right:8px;font-size:10px}
+  #progress{height:2px;background:var(--violeta);width:0%;transition:width .1s linear}
+
+  /* ============ CONTENIDO ============ */
+  main{max-width:1120px;margin:0 auto;padding:0 32px}
+  section{padding:78px 0 20px;scroll-margin-top:150px;border-bottom:1px solid var(--linea-suave)}
+  section:last-of-type{border-bottom:none}
+  .eyebrow{
+    font-size:9.5px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;
+    color:var(--malva);margin-bottom:16px;
+  }
+  h1{
+    font-size:52px;font-weight:300;letter-spacing:-.028em;line-height:1.06;
+    color:var(--tinta);margin-bottom:20px;
+  }
+  h1 em{font-style:normal;color:var(--violeta)}
+  h2{
+    font-size:31px;font-weight:400;letter-spacing:-.022em;line-height:1.18;
+    color:var(--tinta);margin-bottom:12px;
+  }
+  h2 .num{
+    display:block;font-size:10px;font-weight:600;letter-spacing:.26em;
+    color:var(--malva);margin-bottom:11px;
+  }
+  h3{
+    font-size:15px;font-weight:600;letter-spacing:.01em;color:var(--indigo);
+    margin:40px 0 12px;scroll-margin-top:155px;
+    padding-bottom:9px;border-bottom:1px solid var(--linea);
+  }
+  h3 b{color:var(--malva);font-weight:600;margin-right:9px}
+  h4{font-size:12.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--violeta);margin:26px 0 9px}
+  p{margin-bottom:14px;color:rgba(13,13,56,.86);max-width:76ch}
+  .lead{font-size:18px;font-weight:300;line-height:1.62;color:var(--indigo);max-width:70ch}
+  ul.clean{list-style:none;margin:6px 0 18px}
+  ul.clean li{padding:6px 0 6px 20px;position:relative;color:rgba(13,13,56,.86);max-width:76ch}
+  ul.clean li::before{content:'';position:absolute;left:0;top:15px;width:7px;height:1px;background:var(--malva)}
+  strong{font-weight:600;color:var(--tinta)}
+
+  /* quote / cita de clase */
+  .quote{
+    border-left:2px solid var(--malva);
+    padding:4px 0 4px 22px;margin:22px 0 30px;
+    font-size:15px;font-style:italic;font-weight:300;color:var(--violeta);max-width:74ch;
+  }
+
+  /* tablas */
+  .tw{overflow-x:auto;margin:20px 0 26px}
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th{
+    text-align:left;padding:10px 14px 10px 0;
+    font-size:9.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--violeta);border-bottom:1px solid var(--violeta);white-space:nowrap;
+  }
+  td{padding:11px 14px 11px 0;border-bottom:1px solid var(--linea-suave);vertical-align:top;color:rgba(13,13,56,.86)}
+  tr:last-child td{border-bottom:none}
+  td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;padding-right:0}
+  tr.tot td{border-top:1px solid var(--malva);border-bottom:none;font-weight:600;color:var(--tinta)}
+  tr.hi td{background:rgba(244,218,246,.42);font-weight:600;color:var(--tinta);padding-left:14px}
+  .win{color:var(--violeta);font-weight:600}
+  .win::before{content:'●';font-size:8px;margin-right:7px;vertical-align:1px}
+
+  /* cifras */
+  .figs{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--linea);margin:28px 0 6px;border:1px solid var(--linea)}
+  .fig{background:var(--blanco);padding:26px 24px}
+  .fig .lab{font-size:9px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--malva);margin-bottom:12px}
+  .fig .val{font-size:30px;font-weight:300;letter-spacing:-.03em;color:var(--tinta);font-variant-numeric:tabular-nums}
+  .fig .sub{font-size:11px;color:var(--violeta);margin-top:7px;letter-spacing:.02em}
+  .fig.accent{background:linear-gradient(160deg,#F4DAF6 0%,#FBF2FC 100%)}
+  .fig.accent .val{color:var(--tinta)}
+  .fig.dark{background:var(--tinta)}
+  .fig.dark .lab{color:var(--malva)}
+  .fig.dark .val{color:#fff}
+  .fig.dark .sub{color:rgba(244,218,246,.8)}
+
+  /* dos columnas */
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--linea);border:1px solid var(--linea);margin:24px 0 26px}
+  .duo>div{background:var(--blanco);padding:28px 26px}
+  .duo h4{margin-top:0}
+  .duo p{font-size:13.5px;margin-bottom:0}
+  .badge{
+    display:inline-block;margin-top:16px;padding:5px 11px;
+    background:var(--tinta);color:var(--lila);
+    font-size:9px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  }
+  .badge.g{background:rgba(244,218,246,.7);color:var(--indigo)}
+
+  /* caja aviso */
+  .note{
+    background:var(--blanco);border:1px solid var(--linea);
+    border-left:2px solid var(--violeta);
+    padding:22px 26px;margin:26px 0;
+  }
+  .note h4{margin-top:0}
+  .note p{margin-bottom:0;font-size:13.5px}
+
+  /* pasos */
+  ol.steps{list-style:none;counter-reset:s;margin:18px 0 24px}
+  ol.steps li{
+    counter-increment:s;position:relative;padding:12px 0 12px 46px;
+    border-bottom:1px solid var(--linea-suave);font-size:13.5px;color:rgba(13,13,56,.86);
+  }
+  ol.steps li::before{
+    content:counter(s,decimal-leading-zero);position:absolute;left:0;top:12px;
+    font-size:10px;font-weight:600;letter-spacing:.1em;color:var(--malva);
+  }
+
+  footer{
+    border-top:1px solid var(--linea);margin-top:60px;
+    background:var(--tinta);color:rgba(244,218,246,.72);
+  }
+  .fin{max-width:1120px;margin:0 auto;padding:46px 32px;display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
+  .fin p{color:rgba(244,218,246,.68);font-size:11.5px;margin:0;max-width:56ch;letter-spacing:.02em}
+  .fin .mk{font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--malva)}
+  .refs{font-size:11.5px;color:rgba(13,13,56,.7)}
+  .refs div{padding:7px 0;border-bottom:1px solid var(--linea-suave);max-width:88ch}
+</style>
+</head>
+<body>
+
+  <header id="top-panel">
+    <div class="bar">
+      <a class="brand" href="#s1">
+        <svg width="86" height="46" viewBox="0 0 86 46" fill="none" aria-label="Clavis">
+          <path d="M34.6 13.2 A13.4 13.4 0 1 0 34.6 32.8" stroke="#5D5B9B" stroke-width="4.4" stroke-linecap="round"></path>
+          <path d="M33.4 23 H74.5" stroke="#5D5B9B" stroke-width="4.4" stroke-linecap="round"></path>
+          <path d="M62.5 23 V33.4" stroke="#BC92C0" stroke-width="4.4" stroke-linecap="round"></path>
+          <path d="M71.6 23 V30.2" stroke="#BC92C0" stroke-width="4.4" stroke-linecap="round"></path>
+          <circle cx="22.4" cy="23" r="3.5" fill="#F4DAF6" stroke="#BC92C0" stroke-width="1.4"></circle>
+        </svg>
+        <span class="brand-txt">
+          <span class="brand-name">CLAVIS</span>
+          <span class="brand-tag">Every door leads somewhere</span>
+        </span>
+      </a>
+      <div class="bar-meta">
+        Plan de Negocios · Modelo de Producción
+        <span>El Salvador — Julio 2026</span>
+      </div>
+    </div>
+
+    <nav class="sections">
+      <div class="nav-item">
+        <a href="#s1" data-sec="s1"><span class="idx">01</span>Identidad</a>
+        <ul class="dropdown">
+          <li><a href="#s1-1"><i>1.1</i>Marca y propósito</a></li>
+          <li><a href="#s1-2"><i>1.2</i>Naturaleza económica</a></li>
+          <li><a href="#s1-3"><i>1.3</i>Contexto de mercado</a></li>
+        </ul>
+      </div>
+      <div class="nav-item">
+        <a href="#s2" data-sec="s2"><span class="idx">02</span>5 Preguntas</a>
+        <ul class="dropdown">
+          <li><a href="#s2-1"><i>2.1</i>¿Qué y cuánto producir?</a></li>
+          <li><a href="#s2-2"><i>2.2</i>¿Cómo producir? Tecnología</a></li>
+          <li><a href="#s2-3"><i>2.3</i>Hacer vs. comprar</a></li>
+          <li><a href="#s2-4"><i>2.4</i>Comercializar y fijar precios</a></li>
+          <li><a href="#s2-5"><i>2.5</i>Organizar y remunerar</a></li>
+        </ul>
+      </div>
+      <div class="nav-item">
+        <a href="#s3" data-sec="s3"><span class="idx">03</span>Escenario</a>
+        <ul class="dropdown">
+          <li><a href="#s3-1"><i>3.1</i>Ingreso total</a></li>
+          <li><a href="#s3-2"><i>3.2</i>Costos explícitos</a></li>
+          <li><a href="#s3-3"><i>3.3</i>Beneficio contable</a></li>
+          <li><a href="#s3-4"><i>3.4</i>Costos implícitos</a></li>
+          <li><a href="#s3-5"><i>3.5</i>Ganancia real neta</a></li>
+          <li><a href="#s3-6"><i>3.6</i>Escenario Año 2</a></li>
+        </ul>
+      </div>
+      <div class="nav-item">
+        <a href="#s4" data-sec="s4"><span class="idx">04</span>Restricciones</a>
+        <ul class="dropdown">
+          <li><a href="#s4-1"><i>4.1</i>Tecnológica</a></li>
+          <li><a href="#s4-2"><i>4.2</i>De información</a></li>
+          <li><a href="#s4-3"><i>4.3</i>De mercado</a></li>
+        </ul>
+      </div>
+      <div class="nav-item">
+        <a href="#s5" data-sec="s5"><span class="idx">05</span>Eficiencia</a>
+        <ul class="dropdown">
+          <li><a href="#s5-1"><i>5.1</i>Los dos conceptos</a></li>
+          <li><a href="#s5-2"><i>5.2</i>Matriz de decisión</a></li>
+          <li><a href="#s5-3"><i>5.3</i>La prueba de la dualidad</a></li>
+          <li><a href="#s5-4"><i>5.4</i>Regla de decisión</a></li>
+        </ul>
+      </div>
+      <div class="nav-item">
+        <a href="#s6" data-sec="s6"><span class="idx">06</span>Coordinación</a>
+        <ul class="dropdown">
+          <li><a href="#s6-1"><i>6.1</i>Sistemas de mando</a></li>
+          <li><a href="#s6-2"><i>6.2</i>Sistemas de incentivos</a></li>
+        </ul>
+      </div>
+      <div class="nav-item">
+        <a href="#s7" data-sec="s7"><span class="idx">07</span>Agente–Principal</a>
+        <ul class="dropdown">
+          <li><a href="#s7-1"><i>7.1</i>Mapa de relaciones</a></li>
+          <li><a href="#s7-2"><i>7.2</i>Conflictos costosos</a></li>
+          <li><a href="#s7-3"><i>7.3</i>Mecanismos de solución</a></li>
+        </ul>
+      </div>
+      <div class="nav-item">
+        <a href="#s8" data-sec="s8"><span class="idx">08</span>Legal</a>
+        <ul class="dropdown">
+          <li><a href="#s8-1"><i>8.1</i>Comparativa de modelos</a></li>
+          <li><a href="#s8-2"><i>8.2</i>Decisión: S.A.S.</a></li>
+          <li><a href="#s8-3"><i>8.3</i>Ruta de formalización</a></li>
+        </ul>
+      </div>
+      <div class="nav-item">
+        <a href="#s9" data-sec="s9"><span class="idx">09</span>Síntesis</a>
+        <ul class="dropdown">
+          <li><a href="#s9-1"><i>9.1</i>Diagrama maestro</a></li>
+          <li><a href="#s9-2"><i>9.2</i>Cuatro pilares</a></li>
+          <li><a href="#s9-3"><i>9.3</i>Indicadores de control</a></li>
+          <li><a href="#s9-4"><i>9.4</i>Referencias</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div id="progress"></div>
+  </header>
+
+  <main>
+
+    <!-- 01 -->
+    <section id="s1">
+      <p class="eyebrow" id="p-eb1">Sección 01 — Identidad del emprendimiento</p>
+      <h1 id="h-1">Clavis abre la puerta<br>del <em>skincare consciente</em></h1>
+      <p class="lead" id="p-lead1">Importadora y distribuidora de productos de cuidado de la piel con modelo híbrido mayorista y minorista, analizada bajo el modelo económico de la producción: beneficio económico, restricciones, eficiencia y arquitectura institucional.</p>
+
+      <div class="figs">
+        <div class="fig accent">
+          <div class="lab">Ingreso total Año 1</div>
+          <div class="val">$143,100</div>
+          <div class="sub">6,600 unidades · dos canales</div>
+        </div>
+        <div class="fig">
+          <div class="lab">Beneficio contable neto</div>
+          <div class="val">$28,490</div>
+          <div class="sub">Después de ISR del 25%</div>
+        </div>
+        <div class="fig dark">
+          <div class="lab">Beneficio económico</div>
+          <div class="val">$1,290</div>
+          <div class="sub">Ganancia real neta — margen 0.90%</div>
+        </div>
+      </div>
+
+      <h3 id="s1-1"><b>1.1</b>Marca y propósito</h3>
+      <p id="p-1a"><strong>Clavis</strong>, del latín <em>llave</em>, representa apertura, descubrimiento y conexión. Su símbolo dorado evoca elegancia y propósito: abrir puertas hacia el cuidado personal consciente. Bajo el lema <strong>“Every door leads somewhere”</strong>, la marca combina innovación en skincare con una visión moderna y accesible.</p>
+      <div class="duo">
+        <div>
+          <h4 id="h-mision">Misión</h4>
+          <p id="p-mision">Convertirse en un referente accesible y confiable del skincare, ofreciendo productos innovadores y de calidad que conecten con las necesidades reales de las personas, acercando tendencias globales al mercado local.</p>
+        </div>
+        <div>
+          <h4 id="h-vision">Visión</h4>
+          <p id="p-vision">Importar y distribuir cuidando cada detalle para garantizar calidad y precios justos, atendiendo a clientes mayoristas y minoristas con un servicio cercano y transparente.</p>
+        </div>
+      </div>
+
+      <h3 id="s1-2"><b>1.2</b>Naturaleza económica del negocio</h3>
+      <p id="p-1b">Clavis <strong>no es una empresa manufacturera, es una empresa de coordinación logística y comercial</strong>. Esta distinción gobierna todo el análisis: su función de producción no transforma materia prima, sino que convierte <strong>capital de trabajo, cumplimiento regulatorio y logística internacional</strong> en disponibilidad de producto. Su tecnología no está en una línea de ensamble, sino en su cadena de suministro, su registro sanitario y su fulfillment.</p>
+
+      <h3 id="s1-3"><b>1.3</b>Contexto de mercado</h3>
+      <ul class="clean">
+        <li>El Salvador depende casi totalmente de la importación en la categoría cosmética; los proveedores principales son México, Colombia, Estados Unidos, Francia y Guatemala, con creciente presencia de Corea del Sur.</li>
+        <li>El cuidado de la piel es la categoría de mayor dinamismo regional, impulsada por consumidores de 18 a 35 años y por más del 60% de la población activa en redes sociales.</li>
+        <li>Predomina una <strong>premiumización accesible</strong>: disposición a pagar más por formulaciones respaldadas técnicamente, pero con un techo de precio real y bajo.</li>
+      </ul>
+    </section>
+
+    <!-- 02 -->
+    <section id="s2">
+      <h2 id="h-2"><span class="num">Sección 02</span>Las cinco preguntas básicas para maximizar el beneficio económico</h2>
+      <p class="quote" id="p-q2">“Una empresa es una institución que contrata factores de producción y los organiza para producir y vender bienes y servicios. Su objetivo supremo es maximizar sus beneficios económicos.”</p>
+
+      <h3 id="s2-1"><b>2.1</b>¿Qué y cuánto producir?</h3>
+      <p id="p-2a">Portafolio deliberadamente <strong>estrecho y profundo</strong>: 12 SKU en el Año 1, concentrados en las subcategorías de mayor rotación y margen.</p>
+      <div class="tw">
+        <table>
+          <tbody><tr><th>Subcategoría</th><th class="n">SKU Año 1</th><th>Razón económica</th></tr>
+          <tr><td>Serums activos (niacinamida, vitamina C, retinal)</td><td class="n">5</td><td>Mayor precio por mililitro y mayor margen bruto</td></tr>
+          <tr><td>Protección solar facial FPS 50+</td><td class="n">3</td><td>Recompra alta y frecuencia mensual</td></tr>
+          <tr><td>Limpieza y barrera (cleansers, ceramidas)</td><td class="n">4</td><td>Producto de entrada, alta rotación, genera tráfico</td></tr>
+        </tbody></table>
+      </div>
+      <p id="p-2b">No abrir maquillaje ni fragancias en el Año 1 es una decisión de eficiencia económica: cada SKU adicional cuesta <strong>$240 de registro sanitario + $48 de cuota anual de vigilancia + $12 de renovación de autorización</strong>, más honorarios del profesional responsable. <strong>¿Cuánto?</strong> 6,600 unidades en el Año 1 y 9,500 en el Año 2; el volumen lo define la restricción de capital de trabajo, no la ambición.</p>
+
+      <h3 id="s2-2"><b>2.2</b>¿Cómo producir? Tecnología</h3>
+      <ul class="clean">
+        <li><strong>Abastecimiento mixto por arancel:</strong> ~60% del valor CIF desde Corea del Sur, que paga <strong>15% de DAI</strong> en la partida 3304; ~40% desde Estados Unidos y Colombia con <strong>DAI del 0%</strong> bajo CAFTA-DR y TLC, presentando certificado de origen.</li>
+        <li><strong>Bodega-oficina arrendada de 60 m²</strong> con estantería y control de temperatura, sin adquirir inmueble.</li>
+        <li><strong>Fulfillment manual asistido por software:</strong> picking y packing propios, integración de e-commerce y couriers locales para última milla.</li>
+        <li><strong>Tercerización de la interfaz aduanal</strong> mediante agente aduanal externo vía la ventanilla única de CIEX El Salvador.</li>
+      </ul>
+
+      <h3 id="s2-3"><b>2.3</b>¿Qué hacer internamente y qué comprar?</h3>
+      <p id="p-2c">Criterio de costos de transacción: se internaliza lo que define la ventaja competitiva y se compra lo que el mercado hace más barato.</p>
+      <div class="tw">
+        <table>
+          <tbody><tr><th>Actividad</th><th>Decisión</th><th>Fundamento económico</th></tr>
+          <tr><td>Selección de marcas y negociación con proveedores</td><td class="win">Hacer</td><td>Activo estratégico; su transacción en el mercado sería costosa e imitable</td></tr>
+          <tr><td>Contenido, comunidad y venta digital</td><td class="win">Hacer</td><td>Producción en equipo: el conocimiento del cliente es acumulativo</td></tr>
+          <tr><td>Inventario y control de lotes y caducidades</td><td class="win">Hacer</td><td>El costo de una merma excede el costo de supervisarla</td></tr>
+          <tr><td>Desaduanaje y clasificación arancelaria</td><td>Comprar</td><td>Alta especialización, uso esporádico, economías de escala del agente</td></tr>
+          <tr><td>Regencia farmacéutica</td><td>Comprar</td><td>Requisito legal de tiempo parcial; de planta sería capacidad ociosa</td></tr>
+          <tr><td>Transporte de última milla</td><td>Comprar</td><td>El courier tiene un costo unitario inalcanzable para Clavis</td></tr>
+          <tr><td>Contabilidad y cumplimiento tributario</td><td>Comprar</td><td>Transacción estandarizada, contrato simple, bajo costo de negociación</td></tr>
+          <tr><td>Fabricación o maquila de producto</td><td>Comprar</td><td>Exigiría planta, BPM y capital fuera del alcance del proyecto</td></tr>
+        </tbody></table>
+      </div>
+
+      <h3 id="s2-4"><b>2.4</b>¿Cómo comercializar y fijar precios?</h3>
+      <div class="tw">
+        <table>
+          <tbody><tr><th>Canal</th><th class="n">Precio neto de IVA</th><th class="n">Unidades Año 1</th><th>Lógica de elasticidad</th></tr>
+          <tr><td>Minorista B2C</td><td class="n">$29.00</td><td class="n">2,400</td><td>Demanda menos elástica: se paga por curaduría, asesoría y entrega</td></tr>
+          <tr><td>Mayorista B2B</td><td class="n">$17.50</td><td class="n">4,200</td><td>Demanda muy elástica: el revendedor compara contra su propio margen</td></tr>
+        </tbody></table>
+      </div>
+      <p id="p-2d">El <strong>PVP sugerido al consumidor final es de $32.75 con IVA incluido</strong>, coherente en ambos canales para no canibalizar al mayorista.</p>
+
+      <h3 id="s2-5"><b>2.5</b>¿Cómo organizar y remunerar al personal?</h3>
+      <div class="tw">
+        <table>
+          <tbody><tr><th>Puesto</th><th class="n">Salario bruto</th><th>Esquema de remuneración</th></tr>
+          <tr><td>Encargado(a) comercial B2B</td><td class="n">$500.00</td><td>Fijo + comisión sobre <strong>cobranza efectiva</strong></td></tr>
+          <tr><td>Auxiliar de logística e inventario</td><td class="n">$420.00</td><td>Fijo + bono trimestral por exactitud de inventario y cero mermas</td></tr>
+          <tr><td>Community &amp; atención al cliente (Año 2)</td><td class="n">$450.00</td><td>Fijo + variable por conversión y tiempo de respuesta</td></tr>
+        </tbody></table>
+      </div>
+      <p id="p-2e">Todos los salarios base se ubican por encima del <strong>salario mínimo vigente del sector comercio y servicios de $408.80 mensuales</strong>.</p>
+    </section>
+
+    <!-- 03 -->
+    <section id="s3">
+      <h2 id="h-3"><span class="num">Sección 03</span>Escenario financiero: beneficio contable frente a beneficio económico</h2>
+      <p class="quote" id="p-q3">“Los contadores miden el éxito para el pago de impuestos; los economistas lo miden para pronosticar decisiones. El costo total debe incluir el costo de oportunidad completo.”</p>
+
+      <h3 id="s3-1"><b>3.1</b>Ingreso total — Año 1</h3>
+      <div class="tw">
+        <table>
+          <tbody><tr><th>Canal</th><th class="n">Unidades</th><th class="n">Precio neto</th><th class="n">Ingreso</th></tr>
+          <tr><td>Minorista</td><td class="n">2,400</td><td class="n">$29.00</td><td class="n">$69,600.00</td></tr>
+          <tr><td>Mayorista</td><td class="n">4,200</td><td class="n">$17.50</td><td class="n">$73,500.00</td></tr>
+          <tr class="tot"><td>Ingreso total</td><td class="n">6,600</td><td class="n">—</td><td class="n">$143,100.00</td></tr>
+        </tbody></table>
+      </div>
+
+      <h3 id="s3-2"><b>3.2</b>Costos explícitos</h3>
+      <h4 id="h-lc">A. Costo de la mercadería puesta en bodega (landed cost)</h4>
+      <div class="tw">
+        <table>
+          <tbody><tr><th>Concepto</th><th>Cálculo</th><th class="n">Monto</th></tr>
+          <tr><td>Valor FOB (6,600 u. × $7.00)</td><td>Compra en origen</td><td class="n">$46,200.00</td></tr>
+          <tr><td>Flete internacional y seguro</td><td>10% del FOB</td><td class="n">$4,620.00</td></tr>
+          <tr><td><strong>Valor CIF</strong></td><td>Base imponible</td><td class="n"><strong>$50,820.00</strong></td></tr>
+          <tr><td>DAI 15% sobre el 60% de origen coreano</td><td>$50,820 × 60% × 15%</td><td class="n">$4,573.80</td></tr>
+          <tr><td>DAI 0% sobre el 40% con TLC</td><td>Certificado de origen</td><td class="n">$0.00</td></tr>
+          <tr><td>Agente aduanal, almacenaje y transporte interno</td><td>Servicios</td><td class="n">$2,400.00</td></tr>
+          <tr class="tot"><td>Landed cost total</td><td>$8.76 por unidad</td><td class="n">$57,793.80</td></tr>
+        </tbody></table>
+      </div>
+      <div class="note">
+        <h4 id="h-iva">Nota técnica sobre el IVA de importación</h4>
+        <p id="p-iva">La importación paga IVA del 13% sobre CIF más DAI, aproximadamente <strong>$7,201</strong> de desembolso. <strong>No se registra como costo</strong> porque constituye crédito fiscal acreditable contra el débito fiscal de las ventas; sí es una exigencia de flujo de caja que debe estar presupuestada.</p>
+      </div>
+
+      <h4 id="h-op">B. Gastos de operación</h4>
+      <div class="tw">
+        <table>
+          <tbody><tr><th>Concepto</th><th class="n">Monto anual</th></tr>
+          <tr><td>Planilla 2 empleados: salarios $11,040 + ISSS 7.5% $828 + AFP 8.75% $966 + INSAFORP 1% $110.40 + aguinaldo $460 + recargo de vacaciones $138 + indemnización $920</td><td class="n">$14,462.40</td></tr>
+          <tr><td>Regente / profesional responsable, $250 al mes</td><td class="n">$3,000.00</td></tr>
+          <tr><td>Trámites sanitarios Año 1: licencia $300 + 12 registros × $240 + 12 cuotas × $48 + 12 renovaciones × $12 + 3 poderes × $48</td><td class="n">$4,044.00</td></tr>
+          <tr><td>Alquiler bodega-oficina, $450 al mes</td><td class="n">$5,400.00</td></tr>
+          <tr><td>Servicios: energía, agua, internet</td><td class="n">$2,160.00</td></tr>
+          <tr><td>Marketing digital e influencers, $600 al mes</td><td class="n">$7,200.00</td></tr>
+          <tr><td>E-commerce: plataforma $420 + pasarela 4.5% sobre ventas B2C</td><td class="n">$3,552.00</td></tr>
+          <tr><td>Empaque, etiquetado secundario y última milla</td><td class="n">$2,880.00</td></tr>
+          <tr><td>Contabilidad y asesoría legal externa</td><td class="n">$2,400.00</td></tr>
+          <tr><td>Seguros de mercadería y responsabilidad civil</td><td class="n">$720.00</td></tr>
+          <tr><td>Tasas municipales y matrícula de empresa</td><td class="n">$600.00</td></tr>
+          <tr><td>Contingencias</td><td class="n">$900.00</td></tr>
+          <tr class="tot"><td>Subtotal operación</td><td class="n">$47,318.40</td></tr>
+        </tbody></table>
+      </div>
+
+      <h3 id="s3-3"><b>3.3</b>Estado de resultados: el beneficio contable</h3>
+      <div class="tw">
+        <table>
+          <tbody><tr><th>Línea</th><th class="n">Monto</th></tr>
+          <tr><td>Ingreso total</td><td class="n">$143,100.00</td></tr>
+          <tr><td>(−) Landed cost</td><td class="n">($57,793.80)</td></tr>
+          <tr><td>(−) Gastos de operación</td><td class="n">($47,318.40)</td></tr>
+          <tr><td><strong>(=) Costos explícitos totales</strong></td><td class="n"><strong>($105,112.20)</strong></td></tr>
+          <tr><td>(=) Beneficio contable antes de ISR</td><td class="n">$37,987.80</td></tr>
+          <tr><td>(−) ISR 25% por ingresos hasta $150,000</td><td class="n">($9,496.95)</td></tr>
+          <tr class="tot"><td>Beneficio contable neto</td><td class="n">$28,490.85</td></tr>
+        </tbody></table>
+      </div>
+
+      <h3 id="s3-4"><b>3.4</b>Costos implícitos: el costo de oportunidad que el contador no registra</h3>
+      <div class="tw">
+        <table>
+          <tbody><tr><th>Costo implícito</th><th class="n">Monto</th><th>Justificación</th></tr>
+          <tr><td>Trabajo de los propietarios</td><td class="n">$15,000.00</td><td>Salario de mercado que dos socios sacrifican al no emplearse en otra empresa</td></tr>
+          <tr><td>Depreciación económica</td><td class="n">$2,000.00</td><td>Pérdida real de valor de estantería, equipo de cómputo, mobiliario y empaque</td></tr>
+          <tr><td>Intereses perdidos</td><td class="n">$3,600.00</td><td>6% anual sobre $60,000 de capital propio inmovilizado</td></tr>
+          <tr><td>Beneficio normal (prima de riesgo)</td><td class="n">$4,800.00</td><td>8% sobre $60,000 por asumir riesgo regulatorio, cambiario y de inventario</td></tr>
+          <tr><td>Uso de vehículo particular del socio</td><td class="n">$1,800.00</td><td>Renta de mercado no cobrada al negocio</td></tr>
+          <tr class="tot"><td>Costos implícitos totales</td><td class="n">$27,200.00</td><td></td></tr>
+        </tbody></table>
+      </div>
+
+      <h3 id="s3-5"><b>3.5</b>La ganancia real neta</h3>
+      <div class="tw">
+        <table>
+          <tbody><tr><th>Resultado</th><th class="n">Monto</th><th class="n">Margen sobre ingresos</th></tr>
+          <tr><td>Beneficio contable neto</td><td class="n">$28,490.85</td><td class="n">19.91%</td></tr>
+          <tr><td>(−) Costos implícitos</td><td class="n">($27,200.00)</td><td class="n">—</td></tr>
+          <tr class="hi"><td>Beneficio económico — ganancia real neta</td><td class="n">$1,290.85</td><td class="n">0.90%</td></tr>
+        </tbody></table>
+      </div>
+      <div class="note">
+        <h4 id="h-lect">Lectura estratégica del resultado</h4>
+        <p id="p-lect">El Año 1 de Clavis es <strong>contablemente exitoso y económicamente marginal</strong>. Los socios ganan casi exactamente lo mismo que si trabajaran como empleados e invirtieran sus $60,000 en un instrumento financiero: el proyecto es viable, pero todavía no es superior a su alternativa. La decisión de continuar no puede tomarse con el Año 1, sino con la trayectoria. Es la firma de un entorno de <strong>competencia monopolística</strong>, donde el beneficio económico tiende a cero salvo que la diferenciación se profundice.</p>
+      </div>
+
+      <h3 id="s3-6"><b>3.6</b>Escenario Año 2</h3>
+      <div class="tw">
+        <table>
+          <tbody><tr><th>Línea</th><th class="n">Año 1</th><th class="n">Año 2</th></tr>
+          <tr><td>Unidades vendidas</td><td class="n">6,600</td><td class="n">9,500</td></tr>
+          <tr><td>Ingreso total</td><td class="n">$143,100.00</td><td class="n">$205,350.00</td></tr>
+          <tr><td>Costos explícitos</td><td class="n">$105,112.20</td><td class="n">$141,440.90</td></tr>
+          <tr><td>Beneficio contable antes de ISR</td><td class="n">$37,987.80</td><td class="n">$63,909.10</td></tr>
+          <tr><td>Tasa de ISR aplicable</td><td class="n">25%</td><td class="n">30%</td></tr>
+          <tr><td>ISR</td><td class="n">$9,496.95</td><td class="n">$19,172.73</td></tr>
+          <tr><td>Beneficio contable neto</td><td class="n">$28,490.85</td><td class="n">$44,736.37</td></tr>
+          <tr><td>Costos implícitos</td><td class="n">$27,200.00</td><td class="n">$38,300.00</td></tr>
+          <tr class="hi"><td>Beneficio económico</td><td class="n">$1,290.85</td><td class="n">$6,436.37</td></tr>
+          <tr><td>Margen económico</td><td class="n">0.90%</td><td class="n">3.13%</td></tr>
+        </tbody></table>
+      </div>
+      <div class="note">
+        <h4 id="h-umbral">Advertencia fiscal: la zona de castigo del umbral</h4>
+        <p id="p-umbral">Al superar los <strong>$150,000 de ingresos brutos anuales</strong>, la tasa de ISR salta del 25% al 30%. Existe una zona de castigo justo por encima del umbral: crecer de $143,100 a $155,000 puede <strong>reducir</strong> el beneficio neto. Clavis debe decidir deliberadamente saltar el umbral con holgura o mantenerse debajo, pero nunca quedarse en su borde.</p>
+      </div>
+    </section>
+
+    <!-- 04 -->
+    <section id="s4">
+      <h2 id="h-4"><span class="num">Sección 04</span>Las tres restricciones al beneficio</h2>
+      <p class="quote" id="p-q4">“El crecimiento de los beneficios de una empresa no es infinito. Está contenido dentro de un perímetro definido por su entorno y sus capacidades físicas.”</p>
+
+      <h3 id="s4-1"><b>4.1</b>Restricción tecnológica</h3>
+      <p id="p-4a">La tecnología actual dicta un techo físico de despacho: para aumentar las órdenes atendidas hay que contratar más recursos y asumir más costos.</p>
+      <div class="tw">
+        <table>
+          <tbody><tr><th>Límite físico</th><th>Techo actual</th><th>Costo de romperlo</th></tr>
+          <tr><td>Capacidad de picking y packing manual</td><td>~45 pedidos B2C por día por persona</td><td>Personal adicional (~$650 al mes cargado) o migrar a 3PL</td></tr>
+          <tr><td>Capacidad volumétrica de bodega de 60 m²</td><td>~10,000 unidades en inventario</td><td>Bodega mayor: +$300 a $500 al mes</td></tr>
+          <tr><td>Ciclo de importación (pedido a venta)</td><td>90 a 120 días</td><td>Flete aéreo, que multiplica el costo logístico</td></tr>
+          <tr><td>Capital de trabajo</td><td>Un pedido grande por trimestre</td><td>Financiamiento con costo financiero real</td></tr>
+        </tbody></table>
+      </div>
+      <p id="p-4b">Cada salto de volumen exige un salto discreto de costo fijo, lo que genera una <strong>curva de costos escalonada</strong>, no continua.</p>
+
+      <h3 id="s4-2"><b>4.2</b>Restricción de información</h3>
+      <div class="tw">
+        <table>
+          <tbody><tr><th>Zona de incertidumbre</th><th>Riesgo económico concreto</th></tr>
+          <tr><td>Plazo regulatorio</td><td>No se conoce cuánto tardará la aprobación de cada registro sanitario; producto pagado y en tránsito sin registro es inventario congelado</td></tr>
+          <tr><td>Tendencia de consumo</td><td>El skincare se mueve por virales; un activo de moda hoy puede ser irrelevante en ocho meses</td></tr>
+          <tr><td>Esfuerzo del vendedor B2B</td><td>Es costoso verificar si una cuenta no cerró por falta de esfuerzo o por rechazo real del cliente</td></tr>
+          <tr><td>Competencia</td><td>No se sabe cuándo una farmacia importará directamente la misma marca, ni el precio del mercado gris</td></tr>
+          <tr><td>Rotación real por lote</td><td>Se desconoce la fecha en que cada lote dejará de ser vendible con margen</td></tr>
+        </tbody></table>
+      </div>
+      <p id="p-4c">La línea de <strong>contingencias de $900</strong> y la provisión de mermas son el precio explícito que Clavis paga por no saber.</p>
+
+      <h3 id="s4-3"><b>4.3</b>Restricción de mercado</h3>
+      <div class="tw">
+        <table>
+          <tbody><tr><th>Frontera de mercado</th><th>Evidencia</th></tr>
+          <tr><td>Disposición a pagar</td><td>Con un salario mínimo de comercio de $408.80, un serum de $32.75 representa el 8% del ingreso mensual: el techo de precio es real y bajo</td></tr>
+          <tr><td>Precio de los competidores</td><td>Farmacias, cadenas de retail, venta directa y reventa informal fijan el precio de referencia</td></tr>
+          <tr><td>Tamaño del segmento</td><td>Nicho urbano de 18 a 35 años, acotado y concentrado en el AMSS</td></tr>
+          <tr><td>Elasticidad del canal B2B</td><td>El mayorista solo compra si su propio margen sobrevive: piso duro al precio de $17.50</td></tr>
+        </tbody></table>
+      </div>
+      <p id="p-4d">El ingreso de $143,100 <strong>no es una meta ambiciosa, es un techo de mercado realista</strong>. Clavis no puede subir el precio para mejorar su beneficio económico: debe mejorarlo por costos y por rotación.</p>
+    </section>
+
+    <!-- 05 -->
+    <section id="s5">
+      <h2 id="h-5"><span class="num">Sección 05</span>Análisis de la dualidad de la eficiencia</h2>
+      <p class="quote" id="p-q5">“Un método que utiliza tecnología de punta no siempre es el más rentable. Un método económicamente eficiente siempre es tecnológicamente eficiente, pero no a la inversa.”</p>
+
+      <h3 id="s5-1"><b>5.1</b>Los dos conceptos aplicados a Clavis</h3>
+      <div class="duo">
+        <div>
+          <h4 id="h-et">Eficiencia tecnológica</h4>
+          <p id="p-et">Despachar una cantidad determinada de pedidos usando la <strong>menor cantidad física de insumos</strong>. Pregunta: ¿qué método usa menos horas-hombre y menos metros cuadrados por pedido? <strong>No depende de los precios.</strong></p>
+        </div>
+        <div>
+          <h4 id="h-ee">Eficiencia económica</h4>
+          <p id="p-ee">Despachar esa misma cantidad al <strong>costo más bajo posible</strong>. Pregunta: ¿qué método cuesta menos dólares por pedido dados los precios de los factores en El Salvador? <strong>Depende enteramente de salarios frente a renta de capital.</strong></p>
+        </div>
+      </div>
+
+      <h3 id="s5-2"><b>5.2</b>Matriz de decisión: tres métodos de fulfillment para 550 pedidos mensuales</h3>
+      <div class="tw">
+        <table>
+          <tbody><tr><th>Método</th><th>Configuración</th><th>Trabajo</th><th>Capital y software</th></tr>
+          <tr><td>A — Automatizado</td><td>Máxima tecnología, mínimo personal</td><td>1 empleado ($500 base)</td><td>3PL y WMS: $850 al mes</td></tr>
+          <tr><td>B — Semiautomatizado</td><td>Personal con software de apoyo</td><td>2 empleados ($440 base)</td><td>Software de inventario: $120 al mes</td></tr>
+          <tr><td>C — Manual</td><td>Puro trabajo, casi sin capital</td><td>4 empleados ($410 base)</td><td>Hojas de cálculo y balanza: $20 al mes</td></tr>
+        </tbody></table>
+      </div>
+      <p id="p-5a"><strong>Filtro tecnológico:</strong> ningún método usa más de un insumo y más del otro simultáneamente, por lo que <strong>los tres son tecnológicamente eficientes</strong>. El filtro tecnológico no descarta ninguno y no puede tomar la decisión. Se necesita el filtro de precios. Se aplica un factor de carga laboral de 1.30 que incorpora ISSS, AFP, INSAFORP, aguinaldo, vacaciones e indemnización.</p>
+
+      <h3 id="s5-3"><b>5.3</b>La prueba de la dualidad</h3>
+      <div class="duo">
+        <div>
+          <h4 id="h-esv">Escenario El Salvador — trabajo barato</h4>
+          <div class="tw">
+            <table>
+              <tbody><tr><th>Método</th><th class="n">Trabajo</th><th class="n">Capital</th><th class="n">Total</th></tr>
+              <tr><td>A</td><td class="n">$650</td><td class="n">$850</td><td class="n">$1,500</td></tr>
+              <tr class="hi"><td>B</td><td class="n">$1,144</td><td class="n">$120</td><td class="n">$1,264</td></tr>
+              <tr><td>C</td><td class="n">$2,132</td><td class="n">$20</td><td class="n">$2,152</td></tr>
+            </tbody></table>
+          </div>
+          <span class="badge">Gana el método B</span>
+        </div>
+        <div>
+          <h4 id="h-eeuu">Escenario Estados Unidos — trabajo caro</h4>
+          <div class="tw">
+            <table>
+              <tbody><tr><th>Método</th><th class="n">Trabajo</th><th class="n">Capital</th><th class="n">Total</th></tr>
+              <tr class="hi"><td>A</td><td class="n">$2,600</td><td class="n">$850</td><td class="n">$3,450</td></tr>
+              <tr><td>B</td><td class="n">$5,200</td><td class="n">$120</td><td class="n">$5,320</td></tr>
+              <tr><td>C</td><td class="n">$10,400</td><td class="n">$20</td><td class="n">$10,420</td></tr>
+            </tbody></table>
+          </div>
+          <span class="badge g">Gana el método A</span>
+        </div>
+      </div>
+      <p id="p-5b"><strong>La tecnología no cambió. Los precios de los factores sí. Y la respuesta óptima se invirtió por completo.</strong> El método B ahorra $236 al mes ($2,832 al año) frente al automatizado y $888 al mes ($10,656 al año) frente al manual. En El Salvador, con trabajo relativamente barato, Clavis debe ser <strong>deliberadamente intensiva en trabajo</strong>: automatizar prematuramente por modernidad sería tecnológicamente elegante y económicamente ineficiente.</p>
+
+      <h3 id="s5-4"><b>5.4</b>Regla de decisión permanente</h3>
+      <div class="note">
+        <h4 id="h-punto">Punto de indiferencia</h4>
+        <p id="p-punto">El método debe reevaluarse cada vez que cambie el salario mínimo, el costo del software o el volumen. La indiferencia entre B y A ocurre cuando el costo laboral cargado por empleado alcanza aproximadamente <strong>$1,022 al mes</strong>; por encima de ese nivel, Clavis debe migrar al método A. Un aumento significativo del salario mínimo puede convertir la actual eficiencia económica en ineficiencia económica, exactamente como le ocurrió a la industria juguetera del caso de clase.</p>
+      </div>
+    </section>
+
+    <!-- 06 -->
+    <section id="s6">
+      <h2 id="h-6"><span class="num">Sección 06</span>Sistema de coordinación interna</h2>
+      <p class="quote" id="p-q6">“Para superar las restricciones de información, las empresas combinan dos arquitecturas de gestión.”</p>
+      <p id="p-6a">Clavis adopta un <strong>modelo mixto deliberado</strong>: asigna cada arquitectura al área donde su costo de supervisión es menor. Estructura plana de tres niveles — socios y gerencia, encargado comercial y auxiliar de logística, y apoyo externo de regente, contador, agente aduanal y courier.</p>
+
+      <h3 id="s6-1"><b>6.1</b>Sistemas de mando (jerarquía)</h3>
+      <p id="p-6b">Regla de asignación: mando donde la supervisión directa es <strong>fácil y poco costosa</strong>, y donde el error tiene consecuencia legal o de inventario.</p>
+      <div class="tw">
+        <table>
+          <tbody><tr><th>Área</th><th>Por qué mando</th></tr>
+          <tr><td>Recepción, control de lotes y fechas de caducidad</td><td>El resultado es verificable al 100% en el acto; el error genera producto no vendible o sanción</td></tr>
+          <tr><td>Buenas prácticas de almacenamiento y trazabilidad</td><td>Obligación regulatoria; no admite criterio individual, se ejecuta por protocolo</td></tr>
+          <tr><td>Cumplimiento del regente farmacéutico</td><td>Responsabilidad legal indelegable; se rige por norma, no por incentivo</td></tr>
+          <tr><td>Política de precios y descuentos máximos</td><td>Autorizar descuentos por criterio individual erosionaría el margen</td></tr>
+          <tr><td>Declaraciones tributarias e importaciones</td><td>Plazos legales fijos, resultado binario</td></tr>
+        </tbody></table>
+      </div>
+
+      <h3 id="s6-2"><b>6.2</b>Sistemas de incentivos (mercado interno)</h3>
+      <p id="p-6c">Regla de asignación: incentivos donde observar el esfuerzo es <strong>imposible o demasiado costoso</strong>.</p>
+      <div class="tw">
+        <table>
+          <tbody><tr><th>Puesto</th><th>Métrica</th><th>Esquema</th></tr>
+          <tr><td>Encargado(a) comercial B2B</td><td>Cobranza efectiva, no venta facturada</td><td>Comisión de 3% sobre cobro recibido</td></tr>
+          <tr><td>Encargado(a) comercial B2B</td><td>Cuentas activas recurrentes</td><td>Bono por cuenta que recompra tres meses consecutivos</td></tr>
+          <tr><td>Auxiliar de logística</td><td>Exactitud de inventario y mermas</td><td>Bono trimestral si exactitud ≥ 98% y mermas ≤ 1%</td></tr>
+          <tr><td>Auxiliar de logística</td><td>Cumplimiento de despacho</td><td>Bono si ≥ 97% de pedidos salen el mismo día</td></tr>
+          <tr><td>Community manager (Año 2)</td><td>Conversión del canal digital</td><td>Variable por tasa de conversión y tiempo de respuesta</td></tr>
+        </tbody></table>
+      </div>
+      <div class="note">
+        <h4 id="h-crit">Decisión crítica de diseño</h4>
+        <p id="p-crit">Comisionar sobre <strong>cobranza y no sobre venta</strong> resuelve el problema de información más caro de una distribuidora B2B. Comisionar sobre facturación incentivaría al vendedor a colocar producto en clientes insolventes, transfiriendo el riesgo de cartera a la empresa mientras él ya cobró. <strong>Síntesis: mando donde el resultado es verificable y el error es caro; incentivos donde el esfuerzo es invisible y el resultado es medible.</strong></p>
+      </div>
+    </section>
+
+    <!-- 07 -->
+    <section id="s7">
+      <h2 id="h-7"><span class="num">Sección 07</span>El problema del agente y el principal</h2>
+      <p class="quote" id="p-q7">“El conflicto central: los accionistas buscan rentabilidad, los gerentes y empleados buscan maximizar su propio bienestar.”</p>
+      <p id="p-7a"><strong>Sí aplica a Clavis</strong>, de forma atenuada por su tamaño y severa en dos relaciones específicas.</p>
+
+      <h3 id="s7-1"><b>7.1</b>Mapa de relaciones agente-principal</h3>
+      <div class="tw">
+        <table>
+          <tbody><tr><th>Principal</th><th>Agente</th><th>Meta del principal</th><th>Meta del agente</th><th>Intensidad</th></tr>
+          <tr><td>Socios</td><td>Encargado comercial B2B</td><td>Beneficio económico y cartera sana</td><td>Maximizar comisión con mínimo esfuerzo</td><td class="win">Alta</td></tr>
+          <tr><td>Socios</td><td>Auxiliar de logística</td><td>Cero mermas, inventario exacto</td><td>Terminar la jornada, evitar recuentos</td><td>Media</td></tr>
+          <tr><td>Socios</td><td>Regente farmacéutico externo</td><td>Registros aprobados a tiempo</td><td>Minimizar horas por honorario fijo</td><td class="win">Alta</td></tr>
+          <tr><td>Socios</td><td>Agente aduanal</td><td>Clasificación correcta y rapidez</td><td>Cobrar por trámite sin asumir riesgo</td><td>Media</td></tr>
+          <tr><td>Socio inversionista</td><td>Socio operativo</td><td>Retorno sobre el capital aportado</td><td>Reconocimiento del trabajo aportado</td><td>Media</td></tr>
+          <tr><td>Clavis</td><td>Courier de última milla</td><td>Entrega íntegra y puntual</td><td>Maximizar paradas por ruta</td><td>Baja</td></tr>
+        </tbody></table>
+      </div>
+
+      <h3 id="s7-2"><b>7.2</b>Los tres conflictos más costosos</h3>
+      <ul class="clean">
+        <li><strong>Venta frente a cobranza.</strong> El vendedor comisionado por facturación coloca producto en clientes de dudosa solvencia: gana su comisión hoy, el socio absorbe la cuenta incobrable mañana.</li>
+        <li><strong>El regente de honorario fijo.</strong> Con un pago fijo de $250 al mes, maximiza su bienestar dedicando el mínimo de horas; pero el activo más crítico de Clavis es la velocidad de aprobación de registros, y cada mes de retraso es inventario pagado que no puede venderse legalmente.</li>
+        <li><strong>Socio operativo frente a socio inversionista.</strong> Uno prefiere reinvertir en marca y equipo, el otro distribuir utilidades. Es el conflicto que fractura más sociedades pequeñas.</li>
+      </ul>
+
+      <h3 id="s7-3"><b>7.3</b>Mecanismos de resolución</h3>
+      <div class="tw">
+        <table>
+          <tbody><tr><th>Mecanismo</th><th>Aplicación concreta en Clavis</th></tr>
+          <tr><td><strong>Copropiedad</strong></td><td>Participación del 5% en utilidades para el encargado comercial desde el Año 2, con vesting a tres años; contrato con participación variable para el regente ligada a registros aprobados</td></tr>
+          <tr><td><strong>Pago de incentivos</strong></td><td>Comisión sobre cobranza efectiva; bono por exactitud de inventario ≥ 98% y mermas ≤ 1%; honorario por hito al regente por registro aprobado en plazo; cláusula de responsabilidad al agente aduanal por errores de clasificación</td></tr>
+          <tr><td><strong>Contratos a largo plazo</strong></td><td>Pacto de socios firmado antes de operar que define política de reinversión, valoración de aportes de trabajo frente a capital, resolución de empates y cláusula de salida; contratos anuales renovables con regente y agente aduanal</td></tr>
+        </tbody></table>
+      </div>
+      <div class="note">
+        <h4 id="h-esc">El riesgo real está en el momento de escalar</h4>
+        <p id="p-esc">Con dos o tres empleados y socios presentes en la operación diaria, la asimetría de información es baja porque el principal observa directamente. Al pasar de 3 a 10 empleados, la supervisión directa deja de ser posible y <strong>los mecanismos de incentivos deben estar ya instalados y probados, no improvisados</strong>.</p>
+      </div>
+    </section>
+
+    <!-- 08 -->
+    <section id="s8">
+      <h2 id="h-8"><span class="num">Sección 08</span>Arquitectura legal</h2>
+      <p class="quote" id="p-q8">“Cada modelo jurídico es una respuesta distinta al problema del riesgo, el capital y la tributación.”</p>
+
+      <h3 id="s8-1"><b>8.1</b>Comparativa de los modelos disponibles</h3>
+      <div class="tw">
+        <table>
+          <tbody><tr><th>Criterio</th><th>Propiedad individual</th><th>Sociedad de personas</th><th>Corporación (S.A. de C.V. / S.A.S.)</th></tr>
+          <tr><td>Responsabilidad</td><td>Ilimitada: responde el patrimonio personal</td><td>Ilimitada y solidaria entre socios</td><td class="win">Limitada al aporte</td></tr>
+          <tr><td>Acceso a capital</td><td>Limitado a la riqueza del dueño</td><td>Mayor base y habilidades diversas</td><td class="win">Amplio, admite nuevos accionistas</td></tr>
+          <tr><td>Tributación</td><td>Gravada como renta personal</td><td>Relativamente simple</td><td>Riesgo de doble tributación</td></tr>
+          <tr><td>Agilidad de decisión</td><td>Máxima</td><td>Compleja y lenta</td><td>Media, alta en la S.A.S.</td></tr>
+          <tr><td>Continuidad</td><td>Sobrevive poco al dueño</td><td>Frágil ante salida de un socio</td><td class="win">Vida perpetua</td></tr>
+          <tr><td>Problema agente-principal</td><td>Inexistente</td><td>Bajo</td><td>Es donde más se agudiza</td></tr>
+        </tbody></table>
+      </div>
+      <h4 id="h-desc">Por qué se descartan los modelos de responsabilidad ilimitada</h4>
+      <ul class="clean">
+        <li><strong>Riesgo de responsabilidad por producto:</strong> Clavis distribuye productos de aplicación tópica; una reacción adversa o un lote contaminado en origen genera responsabilidad civil que alcanzaría el patrimonio personal.</li>
+        <li><strong>Riesgo regulatorio sanitario:</strong> una sanción por incumplimiento de registro, etiquetado o almacenamiento impacta directamente el patrimonio.</li>
+        <li><strong>Riesgo de inventario y aduana:</strong> un ajuste de valoración, una multa por clasificación incorrecta o un contenedor perdido son pasivos de miles de dólares frente a un capital operativo modesto.</li>
+        <li><strong>Riesgo de crédito comercial:</strong> operar B2B exige otorgar plazo, lo que crea cartera y deuda con proveedores internacionales.</li>
+      </ul>
+      <p id="p-8a">La <strong>responsabilidad limitada no es una preferencia, es un requisito de supervivencia</strong> para este modelo de negocio.</p>
+
+      <h3 id="s8-2"><b>8.2</b>Decisión: Sociedad por Acciones Simplificada</h3>
+      <div class="tw">
+        <table>
+          <tbody><tr><th>Ventaja de la S.A.S.</th><th>Impacto directo en el plan financiero</th></tr>
+          <tr><td>Capital social desde $1.00</td><td>Libera capital que se destina íntegro a inventario y registros sanitarios en lugar de inmovilizarse</td></tr>
+          <tr><td>Inscripción exenta de aranceles registrales hasta el 31 de diciembre de 2026</td><td>Ahorro directo en pacto social, primera matrícula de empresa y registro de local: flujo que se reinvierte en el primer pedido</td></tr>
+          <tr><td>Constitución por formulario estandarizado y trámite digital</td><td>Elimina costos notariales y acorta la puesta en marcha, crítico porque la licencia sanitaria solo puede solicitarse con la sociedad ya inscrita</td></tr>
+          <tr><td>Admite un solo accionista</td><td>Permite iniciar sin forzar un segundo socio y sumar accionistas después sin reestructurar</td></tr>
+          <tr><td>Responsabilidad limitada al aporte</td><td>Blinda el patrimonio personal frente a los cuatro riesgos identificados</td></tr>
+          <tr><td>Gobierno corporativo flexible</td><td>Facilita el pacto de accionistas, el vesting del plan de participación y las decisiones por medios electrónicos</td></tr>
+          <tr><td>Vida jurídica perpetua</td><td>Permite firmar contratos de distribución exclusiva multianuales con laboratorios extranjeros</td></tr>
+        </tbody></table>
+      </div>
+      <p id="p-8b">Denominación propuesta: <strong>Clavis, Sociedad por Acciones Simplificada — Clavis, S.A.S.</strong> La S.A.S. es la arquitectura <em>de entrada</em>, no necesariamente la definitiva: la conversión a S.A. de C.V. debe evaluarse ante el ingreso de un inversionista institucional, la necesidad de crédito bancario de monto elevado o la exigencia de un laboratorio internacional.</p>
+
+      <h3 id="s8-3"><b>8.3</b>Ruta de formalización</h3>
+      <ol class="steps">
+        <li>Inscripción de <strong>Clavis, S.A.S.</strong> ante el Registro de Comercio, mediante formulario digital con arancel exento en 2026.</li>
+        <li>Matrícula de empresa y establecimiento, más NIT y NRC como contribuyente de IVA.</li>
+        <li>Inscripción patronal en ISSS y AFP, y registro ante el Ministerio de Trabajo.</li>
+        <li>Licencia municipal de funcionamiento en la alcaldía correspondiente.</li>
+        <li>Licencia de establecimiento ante la autoridad reguladora sanitaria como importador y distribuidor de cosméticos: <strong>$300</strong>, con profesional responsable acreditado.</li>
+        <li>Registro sanitario de cada producto conforme al RTCA 71.01.35:21: <strong>$240 por producto</strong>, con poder especial apostillado, certificado de libre venta, certificado de BPM, fórmula cuali-cuantitativa, especificaciones del producto terminado y arte de etiqueta según el RTCA 71.03.36:07.</li>
+        <li>Inscripción como importador ante la ventanilla única de comercio exterior y designación de agente aduanal.</li>
+        <li>Inscripción en el Registro MYPE para acceder a programas de apoyo y líneas de financiamiento.</li>
+      </ol>
+      <div class="note">
+        <h4 id="h-trampa">Trampa de secuencia que debe evitarse</h4>
+        <p id="p-trampa">El sistema no permite tramitar registros de producto sin licencia de establecimiento vigente, y la licencia no puede solicitarse sin la sociedad inscrita. <strong>Importar antes de tener el registro aprobado es la falla más costosa posible:</strong> la mercadería queda retenida y el capital de trabajo congelado.</p>
+      </div>
+    </section>
+
+    <!-- 09 -->
+    <section id="s9">
+      <h2 id="h-9"><span class="num">Sección 09</span>Síntesis: el diagrama maestro de la producción</h2>
+
+      <h3 id="s9-1"><b>9.1</b>La anatomía completa de las decisiones productivas</h3>
+      <div class="tw">
+        <table>
+          <tbody><tr><th>Capa</th><th>Contenido en Clavis</th></tr>
+          <tr><td><strong>Núcleo — Objetivo</strong></td><td>Maximizar beneficio económico = Ingreso − Costos de oportunidad. Año 1: $1,290.85. Año 2: $6,436.37</td></tr>
+          <tr><td><strong>Filtro de eficiencia</strong></td><td>Método de menor costo: fulfillment semiautomatizado, intensivo en trabajo por el bajo costo laboral relativo salvadoreño</td></tr>
+          <tr><td><strong>Gestión</strong></td><td>Mando en cumplimiento sanitario e inventario; incentivos en ventas B2B y desempeño digital</td></tr>
+          <tr><td><strong>Decisión de frontera</strong></td><td>Hacer: curaduría, comunidad digital, control de inventario. Comprar: aduana, regencia, última milla, contabilidad</td></tr>
+          <tr><td><strong>Estructura legal</strong></td><td>S.A.S.: responsabilidad limitada, capital desde $1.00, inscripción exenta hasta el 31/12/2026</td></tr>
+          <tr><td><strong>Entorno competitivo</strong></td><td>Competencia monopolística: muchos oferentes, producto diferenciado por curaduría y marca, con barreras de entrada moderadas dadas por el costo y el tiempo del registro sanitario</td></tr>
+        </tbody></table>
+      </div>
+
+      <h3 id="s9-2"><b>9.2</b>Los cuatro pilares que justifican que Clavis exista como empresa</h3>
+      <div class="tw">
+        <table>
+          <tbody><tr><th>Pilar</th><th>Cómo lo captura Clavis</th></tr>
+          <tr><td>1. Reducción de costos de transacción</td><td>El cliente no tiene que buscar, negociar, importar, registrar y desaduanar. Clavis absorbe cientos de transacciones y las convierte en una sola compra. <strong>Es la razón económica de su existencia.</strong></td></tr>
+          <tr><td>2. Economías de escala</td><td>Consolidar 6,600 unidades en pocos embarques reduce el costo logístico y arancelario unitario muy por debajo de una importación individual</td></tr>
+          <tr><td>3. Economías de alcance</td><td>El mismo regente, bodega, licencia, plataforma y equipo sirven a 12 SKU hoy y a 16 mañana, con costo marginal decreciente</td></tr>
+          <tr><td>4. Producción en equipo</td><td>Curaduría, contenido, logística y regencia generan juntas un resultado mayor que la suma de esas funciones por separado</td></tr>
+        </tbody></table>
+      </div>
+      <h4 id="h-jug">El riesgo de convertirse en el caso de la juguetera</h4>
+      <ul class="clean">
+        <li><strong>Desintermediación:</strong> si el consumidor compra directo en plataformas internacionales, la intermediación pierde valor. Defensa: marca, comunidad, asesoría y garantía de autenticidad.</li>
+        <li><strong>Integración vertical del cliente:</strong> si una cadena importa directamente las mismas marcas, elimina a Clavis del canal. Defensa: contratos de distribución exclusiva, viables por tener personalidad jurídica de vida perpetua.</li>
+        <li><strong>Cambio en el precio de los factores:</strong> un alza del salario mínimo invierte la matriz de eficiencia. Defensa: monitorear el punto de indiferencia de $1,022 y migrar al método A al cruzarlo.</li>
+      </ul>
+
+      <h3 id="s9-3"><b>9.3</b>Indicadores de control del beneficio económico</h3>
+      <div class="tw">
+        <table>
+          <tbody><tr><th>Indicador</th><th>Meta Año 1</th><th>Por qué importa</th></tr>
+          <tr><td>Rotación de inventario</td><td>≥ 3.5 veces al año</td><td>Cada día de inventario detenido genera interés perdido implícito</td></tr>
+          <tr><td>Mermas por caducidad</td><td>≤ 1% del landed cost</td><td>Es pérdida directa e irrecuperable de beneficio</td></tr>
+          <tr><td>Días de cartera B2B</td><td>≤ 30 días</td><td>La cartera lenta transforma venta contable en iliquidez real</td></tr>
+          <tr><td>Margen bruto ponderado</td><td>≥ 55%</td><td>Es el colchón que absorbe el costo implícito</td></tr>
+          <tr><td>Ingreso bruto anual</td><td>Vigilar el umbral de $150,000</td><td>Determina si el ISR es del 25% o del 30%</td></tr>
+          <tr class="hi"><td>Beneficio económico</td><td>Mayor que cero y creciente</td><td>Único indicador que confirma que el proyecto vale más que su alternativa</td></tr>
+        </tbody></table>
+      </div>
+
+      <h3 id="s9-4"><b>9.4</b>Referencias</h3>
+      <div class="refs">
+        <div>Asamblea Legislativa de la República de El Salvador. (1970). <em>Código de Comercio</em> (Decreto Legislativo N.° 671). Diario Oficial.</div>
+        <div>Asamblea Legislativa de la República de El Salvador. (2023). <em>Decreto Legislativo N.° 905: Reformas al Código de Comercio para la incorporación de la Sociedad por Acciones Simplificada</em>. Diario Oficial.</div>
+        <div>Banco Central de Reserva de El Salvador. (2026). <em>Centro de Trámites de Importaciones y Exportaciones: requisitos para importadores</em>.</div>
+        <div>Centro Nacional de Registros. (2026). <em>Registro de Comercio: inscripción de Sociedades por Acciones Simplificadas y matrícula de empresa</em>.</div>
+        <div>Coase, R. H. (1937). The nature of the firm. <em>Economica</em>, 4(16), 386–405.</div>
+        <div>Consejo de Ministros de Integración Económica Centroamericana. (2021). <em>RTCA 71.01.35:21 Productos cosméticos. Registro e inscripción sanitaria</em>. SIECA.</div>
+        <div>Euromonitor International. (2025). <em>Beauty and personal care in Latin America: market analysis</em>.</div>
+        <div>Jensen, M. C., &amp; Meckling, W. H. (1976). Theory of the firm: managerial behavior, agency costs and ownership structure. <em>Journal of Financial Economics</em>, 3(4), 305–360.</div>
+        <div>Kantar Worldpanel. (2026). <em>Consumer insights Centroamérica: comportamiento de compra en belleza y cuidado personal</em>.</div>
+        <div>Ministerio de Hacienda de El Salvador. (2025). <em>Ley de Impuesto sobre la Renta y Ley de IVA</em>.</div>
+        <div>Ministerio de Trabajo y Previsión Social. (2025). <em>Tarifas de salarios mínimos vigentes por sector económico</em>.</div>
+        <div>Parkin, M., &amp; Loría, E. (2020). <em>Microeconomía: versión para Latinoamérica</em> (12.ª ed.). Pearson Educación.</div>
+        <div>Secretaría de Integración Económica Centroamericana. (2025). <em>Sistema Arancelario Centroamericano: derechos arancelarios a la importación, capítulo 33</em>.</div>
+        <div>Superintendencia de Regulación Sanitaria. (2026). <em>Tarifario de servicios: registro sanitario de productos cosméticos y autorización de establecimientos</em>.</div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="fin">
+      <div>
+        <p class="mk">Clavis, S.A.S. — Every door leads somewhere</p>
+        <p id="p-foot">Las cifras financieras son proyecciones propias construidas sobre parámetros oficiales verificables: salario mínimo, tasas de ISR e IVA, DAI de la partida 3304, cotizaciones patronales y tarifario sanitario. Los precios de venta, volúmenes y costos FOB son supuestos del proyecto y deben validarse con cotizaciones reales de proveedores.</p>
+      </div>
+      <p class="mk">Plan de Negocios · El Salvador 2026</p>
+    </div>
+  </footer>
+
+<script>
+  (function(){
+    var links = document.querySelectorAll('a[href^="#"]');
+    for (var i=0;i<links.length;i++){
+      links[i].addEventListener('click', function(e){
+        var id = this.getAttribute('href').substring(1);
+        var el = document.getElementById(id);
+        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); }
+      });
+    }
+
+    var bar = document.getElementById('progress');
+    window.addEventListener('scroll', function(){
+      var h = document.body.scrollHeight - window.innerHeight;
+      bar.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+    });
+
+    var navs = document.querySelectorAll('.nav-item > a[data-sec]');
+    var secs = document.querySelectorAll('main section');
+    if ('IntersectionObserver' in window){
+      var obs = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){
+          if(en.isIntersecting){
+            for(var j=0;j<navs.length;j++){
+              navs[j].classList.toggle('active', navs[j].getAttribute('data-sec') === en.target.id);
+            }
+          }
+        });
+      }, {rootMargin:'-150px 0px -65% 0px'});
+      for(var k=0;k<secs.length;k++){ obs.observe(secs[k]); }
+    }
+  })();
+</script>
+
+</body></html>
